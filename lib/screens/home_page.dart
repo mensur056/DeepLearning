@@ -20,52 +20,23 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 width: 35,
               ),
-              const TextButton(
-                  onPressed: null,
-                  child: Text(
-                    'Courses',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  )),
+              const AppBarTitles(title: 'Courses'),
               const SizedBox(
                 width: 35,
               ),
-              const TextButton(
-                onPressed: null,
-                child: Text(
-                  'The Batch',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-              ),
+              const AppBarTitles(title: 'The Batch'),
               const SizedBox(
                 width: 35,
               ),
-              const TextButton(
-                onPressed: null,
-                child: Text(
-                  'Blog',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-              ),
+              const AppBarTitles(title: 'Blog'),
               const SizedBox(
                 width: 35,
               ),
-              const TextButton(
-                onPressed: null,
-                child: Text(
-                  'Events',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-              ),
+              const AppBarTitles(title: 'Events'),
               const SizedBox(
                 width: 35,
               ),
-              const TextButton(
-                onPressed: null,
-                child: Text(
-                  'Company',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-              ),
+              const AppBarTitles(title: 'Company'),
               const SizedBox(
                 width: 35,
               ),
@@ -81,7 +52,8 @@ class HomePage extends StatelessWidget {
                 child: const Center(child: Text('Get Al News')),
               )
             ],
-          ),  Expanded(child: Container()),
+          ),
+          Expanded(child: Container()),
         ],
       ),
       body: SafeArea(
@@ -174,6 +146,25 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class AppBarTitles extends StatelessWidget {
+  const AppBarTitles({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: null,
+      child: Text(
+        title,
+        style: const TextStyle(color: Colors.black, fontSize: 20),
       ),
     );
   }

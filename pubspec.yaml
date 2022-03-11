@@ -69,9 +69,9 @@ flutter:
       fonts:
         - asset: fonts/CarterOne.ttf
 
-    - family: Fredoka
+    - family: Fredokat
       fonts:
-        - asset: fonts/Fredoka.ttf
+        - asset: fonts/Fredokat.ttf
 
     - family: Poppins
       fonts:
