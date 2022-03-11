@@ -22,23 +22,23 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Courses'),
+              const AppBarTitles(title: 'Courses',font: 'Fredokat'),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'The Batch'),
+              const AppBarTitles(title: 'The Batch',font: 'Fredokat',),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Blog'),
+              const AppBarTitles(title: 'Blog',font: 'Fredokat',),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Events'),
+              const AppBarTitles(title: 'Events',font: 'Fredokat',),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Company'),
+              const AppBarTitles(title: 'Company',font: 'Fredokat',),
               const SizedBox(
                 width: 35,
               ),
