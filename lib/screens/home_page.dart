@@ -1,3 +1,4 @@
+import 'package:deep_learning/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,23 +14,87 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            Row(
+            Column(
               children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.red,
-                    height: 463
-                  ),
-                ), Expanded(
-                  child: Container(
-                    color: Colors.blue,
-                    height: 463,
-                  ),
-                ), Expanded(
-                  child: Container(
-                    color: Colors.red,
-                    height: 463,
-                  ),
+                Row(
+                  children: [
+                    Expanded(
+                      child:
+                          Container(color: Colors.red, height: firstBarHeight),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.blue,
+                        height: firstBarHeight,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.red,
+                        height: firstBarHeight,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                          color: Colors.greenAccent, height: secondBarHeight),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.yellow,
+                        height: secondBarHeight,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: secondBarHeight,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child:
+                          Container(color: Colors.grey, height: thirdBarHeight),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.grey,
+                        height: thirdBarHeight,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.grey,
+                        height: thirdBarHeight,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                          color: Colors.orangeAccent, height: fourthBarHeight),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.orangeAccent,
+                        height: fourthBarHeight,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.orangeAccent,
+                        height: fourthBarHeight,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
