@@ -1,5 +1,6 @@
 import 'package:deep_learning/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:hovering/hovering.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,7 +12,9 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         actions: [
+          Expanded(child: Container()),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('images/deepLearningLogo.png'),
               const SizedBox(
@@ -62,9 +65,23 @@ class HomePage extends StatelessWidget {
                   'Company',
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              HoverContainer(
+                decoration: const BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                hoverDecoration: const BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+                height: 40,
+                width: 120,
+                child: const Center(child: Text('Get Al News')),
               )
             ],
-          )
+          ),  Expanded(child: Container()),
         ],
       ),
       body: SafeArea(
