@@ -2,6 +2,8 @@ import 'package:deep_learning/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
+import '../widgets/app_bar_titles.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -151,21 +153,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class AppBarTitles extends StatelessWidget {
-  const AppBarTitles({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: null,
-      child: Text(
-        title,
-        style: const TextStyle(color: Colors.black, fontSize: 20),
-      ),
-    );
-  }
-}
