@@ -18,17 +18,17 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: Container(
                     color: Colors.red,
-                    height: 300,
+                    height: 463
                   ),
                 ), Expanded(
                   child: Container(
                     color: Colors.blue,
-                    height: 300,
+                    height: 463,
                   ),
                 ), Expanded(
                   child: Container(
                     color: Colors.red,
-                    height: 300,
+                    height: 463,
                   ),
                 ),
               ],
