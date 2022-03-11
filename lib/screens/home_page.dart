@@ -20,11 +20,11 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child:
-                          Container(color: Colors.red, height: firstBarHeight),
+                      Container(color: Colors.red, height: firstBarHeight),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.blue,
+                        color: Colors.red,
                         height: firstBarHeight,
                       ),
                     ),
@@ -40,17 +40,17 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.greenAccent, height: secondBarHeight),
+                          color: Colors.white, height: secondBarHeight),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.yellow,
+                        color: Colors.white,
                         height: secondBarHeight,
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.black,
+                        color: Colors.white,
                         height: secondBarHeight,
                       ),
                     ),
@@ -60,17 +60,18 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child:
-                          Container(color: Colors.grey, height: thirdBarHeight),
+                      Container(
+                          color: Color(0xFFf0f6f9), height: thirdBarHeight),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.grey,
+                        color: Color(0xFFf0f6f9),
                         height: thirdBarHeight,
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.grey,
+                        color: Color(0xFFf0f6f9),
                         height: thirdBarHeight,
                       ),
                     ),
@@ -80,17 +81,17 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.orangeAccent, height: fourthBarHeight),
+                          color: Colors.white,  height: fourthBarHeight),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.orangeAccent,
+                        color: Colors.white,
                         height: fourthBarHeight,
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.orangeAccent,
+                        color: Colors.white,
                         height: fourthBarHeight,
                       ),
                     ),
