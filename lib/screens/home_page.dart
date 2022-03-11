@@ -9,7 +9,63 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,actions: [Row(children: [],)],
+        toolbarHeight: 100,
+        actions: [
+          Row(
+            children: [
+              Image.asset('images/deepLearningLogo.png'),
+              const SizedBox(
+                width: 35,
+              ),
+              const TextButton(
+                  onPressed: null,
+                  child: Text(
+                    'Courses',
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  )),
+              const SizedBox(
+                width: 35,
+              ),
+              const TextButton(
+                onPressed: null,
+                child: Text(
+                  'The Batch',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              const TextButton(
+                onPressed: null,
+                child: Text(
+                  'Blog',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              const TextButton(
+                onPressed: null,
+                child: Text(
+                  'Events',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
+              const SizedBox(
+                width: 35,
+              ),
+              const TextButton(
+                onPressed: null,
+                child: Text(
+                  'Company',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              )
+            ],
+          )
+        ],
       ),
       body: SafeArea(
         child: ListView(
@@ -20,7 +76,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child:
-                      Container(color: Colors.red, height: firstBarHeight),
+                          Container(color: Colors.red, height: firstBarHeight),
                     ),
                     Expanded(
                       child: Container(
@@ -59,19 +115,19 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child:
-                      Container(
-                          color: Color(0xFFf0f6f9), height: thirdBarHeight),
+                      child: Container(
+                          color: const Color(0xFFf0f6f9),
+                          height: thirdBarHeight),
                     ),
                     Expanded(
                       child: Container(
-                        color: Color(0xFFf0f6f9),
+                        color: const Color(0xFFf0f6f9),
                         height: thirdBarHeight,
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        color: Color(0xFFf0f6f9),
+                        color: const Color(0xFFf0f6f9),
                         height: thirdBarHeight,
                       ),
                     ),
@@ -81,7 +137,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.white,  height: fourthBarHeight),
+                          color: Colors.white, height: fourthBarHeight),
                     ),
                     Expanded(
                       child: Container(
