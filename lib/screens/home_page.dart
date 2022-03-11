@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
+        toolbarHeight: 100,actions: [Row(children: [],)],
       ),
       body: SafeArea(
         child: ListView(
