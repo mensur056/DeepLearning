@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.green,
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
-                width: 120,
+                width: 140,
                 child: const Center(child: Text('Get Al News')),
               )
             ],
