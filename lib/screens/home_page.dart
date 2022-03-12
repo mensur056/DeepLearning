@@ -79,7 +79,8 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.red, height: firstBarHeight),
+                          color: Colors.greenAccent,
+                           height: firstBarHeight),
                     ),
                     Expanded(
                       flex: 10,
@@ -110,9 +111,12 @@ class HomePage extends StatelessWidget {
                                 )
                               ],
                             ),
-                            Image.asset(
-                              'images/logo123.png',
+                            Padding(
+                              padding: const EdgeInsets.only(left:80.0),
+                              child: Image.asset(
+                                'images/logoooo.png',
 
+                              ),
                             )
                           ],
                         ),
@@ -120,7 +124,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.red,
+                        color: Colors.greenAccent,
                         height: firstBarHeight,
                       ),
                     ),
