@@ -22,23 +22,35 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Courses',font: 'Fredokat'),
+              const AppBarTitles(title: 'Courses', font: 'Fredokat'),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'The Batch',font: 'Fredokat',),
+              const AppBarTitles(
+                title: 'The Batch',
+                font: 'Fredokat',
+              ),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Blog',font: 'Fredokat',),
+              const AppBarTitles(
+                title: 'Blog',
+                font: 'Fredokat',
+              ),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Events',font: 'Fredokat',),
+              const AppBarTitles(
+                title: 'Events',
+                font: 'Fredokat',
+              ),
               const SizedBox(
                 width: 35,
               ),
-              const AppBarTitles(title: 'Company',font: 'Fredokat',),
+              const AppBarTitles(
+                title: 'Company',
+                font: 'Fredokat',
+              ),
               const SizedBox(
                 width: 35,
               ),
@@ -66,16 +78,39 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
+                      flex: 1,
                       child:
                           Container(color: Colors.red, height: firstBarHeight),
                     ),
                     Expanded(
+                      flex: 8,
                       child: Container(
-                        color: Colors.red,
+                        color: Colors.greenAccent,
                         height: firstBarHeight,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Build your AI career',
+                                  style: TextStyle(fontWeight: FontWeight.bold,
+                                      color: Colors.white, fontSize: 80,fontFamily: 'Popoins'),
+                                ),
+                                Text(
+                                  'with DeepLearning.AI',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     Expanded(
+                      flex: 1,
                       child: Container(
                         color: Colors.red,
                         height: firstBarHeight,
@@ -152,4 +187,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

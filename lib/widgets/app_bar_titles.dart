@@ -19,17 +19,14 @@ class AppBarTitles extends StatelessWidget {
             return Colors.red;
           }
 
-          return  Colors.black;
+          return Colors.black;
         }),
       ),
-      onPressed: (){},
+      onPressed: () {},
       child: Text(
         title,
         style: TextStyle(
-
-            fontSize: 20,
-            fontFamily: font,
-            fontWeight: FontWeight.bold),
+            fontSize: 20, fontFamily: font, fontWeight: FontWeight.bold),
       ),
     );
   }
