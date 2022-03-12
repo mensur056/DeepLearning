@@ -78,12 +78,11 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      flex: 1,
-                      child:
-                          Container(      color: Colors.greenAccent, height: firstBarHeight),
+                      child: Container(
+                          color: Colors.red, height: firstBarHeight),
                     ),
                     Expanded(
-                      flex: 8,
+                      flex: 10,
                       child: Container(
                         color: Colors.greenAccent,
                         height: firstBarHeight,
@@ -93,28 +92,35 @@ class HomePage extends StatelessWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
+                                SizedBox(
+                                  height: 150,
+                                ),
                                 Text(
                                   'Build your AI career',
                                   style: TextStyle(
                                       color: Colors.white,
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 60,
-                                      fontFamily: 'Rowdies'),
+                                      fontFamily: 'Poppins'),
                                 ),
                                 Text(
                                   'with DeepLearning.AI',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 45),
+                                      color: Colors.white, fontSize: 40),
                                 )
                               ],
+                            ),
+                            Image.asset(
+                              'images/logo123.png',
+
                             )
                           ],
                         ),
                       ),
                     ),
                     Expanded(
-                      flex: 1,
                       child: Container(
-                        color: Colors.greenAccent,
+                        color: Colors.red,
                         height: firstBarHeight,
                       ),
                     ),
