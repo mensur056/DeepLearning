@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child:
-                          Container(color: Colors.red, height: firstBarHeight),
+                          Container(      color: Colors.greenAccent, height: firstBarHeight),
                     ),
                     Expanded(
                       flex: 8,
@@ -95,13 +95,15 @@ class HomePage extends StatelessWidget {
                               children: const [
                                 Text(
                                   'Build your AI career',
-                                  style: TextStyle(fontWeight: FontWeight.bold,
-                                      color: Colors.white, fontSize: 80,fontFamily: 'Popoins'),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 60,
+                                      fontFamily: 'Rowdies'),
                                 ),
                                 Text(
                                   'with DeepLearning.AI',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white, fontSize: 45),
                                 )
                               ],
                             )
@@ -112,7 +114,7 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        color: Colors.red,
+                        color: Colors.greenAccent,
                         height: firstBarHeight,
                       ),
                     ),
