@@ -4,6 +4,7 @@ import 'package:hovering/hovering.dart';
 
 import '../widgets/app_bar_titles.dart';
 import '../widgets/second_part_bar.dart';
+import '../widgets/thir_part_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -189,43 +190,11 @@ class HomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Row(
-                              children: [
-                                Container(
-                                  color: Colors.green,
-                                  height: 200,
-                                  width: barWidth,
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                Container(
-                                  color: Colors.green,
-                                  height: 200,
-                                  width: barWidth,
-                                ),
-                              ],
-                            ),
+                            const ThirdPartBar(),
                             const SizedBox(
                               height: 30,
                             ),
-                            Row(
-                              children: [
-                                Container(
-                                  color: Colors.green,
-                                  height: 200,
-                                  width: barWidth,
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                Container(
-                                  color: Colors.green,
-                                  height: 200,
-                                  width: barWidth,
-                                ),
-                              ],
-                            ),
+                            const ThirdPartBar(),
                             const SizedBox(
                               height: 50,
                             ),
@@ -274,3 +243,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
