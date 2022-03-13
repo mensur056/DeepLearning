@@ -14,60 +14,60 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         actions: [
-          Expanded(child: Container()),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('images/deepLearningLogo.png'),
-              const SizedBox(
-                width: 35,
-              ),
-              const AppBarTitles(title: 'Courses', font: 'Fredokat'),
-              const SizedBox(
-                width: 35,
-              ),
-              const AppBarTitles(
-                title: 'The Batch',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              const AppBarTitles(
-                title: 'Blog',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              const AppBarTitles(
-                title: 'Events',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              const AppBarTitles(
-                title: 'Company',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              HoverContainer(
-                decoration: const BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                hoverDecoration: const BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                height: 40,
-                width: 140,
-                child: const Center(child: Text('Get Al News')),
-              )
-            ],
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('images/deepLearningLogo.png'),
+                const SizedBox(
+                  width: 35,
+                ),
+                const AppBarTitles(title: 'Courses', font: 'Fredokat'),
+                const SizedBox(
+                  width: 35,
+                ),
+                const AppBarTitles(
+                  title: 'The Batch',
+                  font: 'Fredokat',
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                const AppBarTitles(
+                  title: 'Blog',
+                  font: 'Fredokat',
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                const AppBarTitles(
+                  title: 'Events',
+                  font: 'Fredokat',
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                const AppBarTitles(
+                  title: 'Company',
+                  font: 'Fredokat',
+                ),
+                const SizedBox(
+                  width: 35,
+                ),
+                HoverContainer(
+                  decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                  hoverDecoration: const BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                  height: 40,
+                  width: 140,
+                  child: const Center(child: Text('Get Al News')),
+                )
+              ],
+            ),
           ),
-          Expanded(child: Container()),
         ],
       ),
       body: SafeArea(
@@ -79,41 +79,41 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.greenAccent, height: firstBarHeight),
-                    ),
-                    Expanded(
-                      flex: 10,
-                      child: Container(
                         color: Colors.greenAccent,
                         height: firstBarHeight,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  SizedBox(
-                                    height: 125,
-                                  ),
-                                  Text(
-                                    'Build your AI career',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 50,
-                                        fontFamily: 'Poppins'),
-                                  ),
-                                  Text(
-                                    'with DeepLearning.AI',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 35),
-                                  )
-                                ],
+                              flex: 1,
+                              child: Container(
+                                color: Colors.greenAccent,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 80.0),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                SizedBox(
+                                  height: 150,
+                                ),
+                                Text(
+                                  'Build your AI career',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 60,
+                                      fontFamily: 'Poppins'),
+                                ),
+                                Text(
+                                  'with DeepLearning.AI',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 30),
+                                )
+                              ],
+                            ),
+                            Expanded(
+                              flex: 5,
                               child: Image.asset(
                                 'images/logoooo.png',
                               ),
@@ -122,29 +122,50 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.greenAccent,
-                        height: firstBarHeight,
-                      ),
-                    ),
                   ],
                 ),
                 Row(
                   children: [
                     Expanded(
+                      flex: 2,
                       child: Container(
-                          color: Colors.white, height: secondBarHeight),
+                          color: Colors.black, height: secondBarHeight),
                     ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.white,
-                        height: secondBarHeight,
+                    Container(
+                      color: Colors.white,
+                      height: secondBarHeight,
+                      child: Padding(
+                        padding: const EdgeInsets.all(40.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 250,
+                              width: 300,
+                              color: Colors.red,
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Container(
+                              height: 250,
+                              width: 300,
+                              color: Colors.red,
+                            ),  const SizedBox(
+                              width: 20,
+                            ),
+                            Container(
+                              height: 250,
+                              width: 300,
+                              color: Colors.red,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     Expanded(
+                      flex: 2,
                       child: Container(
-                        color: Colors.white,
+                        color: Colors.black,
                         height: secondBarHeight,
                       ),
                     ),
