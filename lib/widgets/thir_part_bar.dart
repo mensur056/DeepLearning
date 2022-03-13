@@ -21,12 +21,15 @@ class ThirdPartBar extends StatelessWidget {
               height: 220,
               width: barWidth,
             ),
-            Container(
-              height: 80,
-              width: 80,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle,),
-              child: Image.asset('images/musk.webp'),
+            Positioned(
+              bottom: 20,
+              left: 20,
+              child: Container(
+                height: 70,
+                width: 70,
+                decoration: const BoxDecoration(shape: BoxShape.circle),
+                child: Image.asset('images/musk-modified.png'),
+              ),
             )
           ],
         ),
