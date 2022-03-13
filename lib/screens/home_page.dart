@@ -180,10 +180,62 @@ class HomePage extends StatelessWidget {
                           color: const Color(0xFFf0f6f9),
                           height: thirdBarHeight),
                     ),
-                    Expanded(
-                      child: Container(
-                        color: const Color(0xFFf0f6f9),
-                        height: thirdBarHeight,
+                    Container(
+                      color: Colors.red,
+                      width: 921,
+                      height: 670,
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  color: Colors.green,
+                                  height: 200,
+                                  width: barWidth,
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Container(
+                                  color: Colors.green,
+                                  height: 200,
+                                  width: barWidth,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  color: Colors.green,
+                                  height: 200,
+                                  width: barWidth,
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Container(
+                                  color: Colors.green,
+                                  height: 200,
+                                  width: barWidth,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 50,
+                            ),
+                            Container(
+                              color: Colors.blue,
+                              height: 60,
+                              width: 300,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     Expanded(
