@@ -134,32 +134,63 @@ class HomePage extends StatelessWidget {
                     Container(
                       color: Colors.white,
                       height: secondBarHeight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(40.0),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 250,
-                              width: 300,
-                              color: Colors.red,
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            Container(
-                              height: 250,
-                              width: 300,
-                              color: Colors.red,
-                            ),  const SizedBox(
-                              width: 20,
-                            ),
-                            Container(
-                              height: 250,
-                              width: 300,
-                              color: Colors.red,
-                            )
-                          ],
-                        ),
+                      child: Row(
+                        children: [
+                          Stack(
+                            children: [
+                              Container(
+                                height: 250,
+                                width: 300,
+                                color: Colors.red,
+                              ),
+                              Container(
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.green),
+                                height: 160,
+                                width: 160,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Stack(
+                            children: [
+                              Container(
+                                height: 250,
+                                width: 300,
+                                color: Colors.red,
+                              ),
+                              Container(
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.green),
+                                height: 160,
+                                width: 160,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Stack(
+                            children: [
+                              Container(
+                                height: 250,
+                                width: 300,
+                                color: Colors.red,
+                              ),
+                              Container(
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.green),
+                                height: 160,
+                                width: 160,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                     Expanded(
