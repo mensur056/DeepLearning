@@ -137,15 +137,27 @@ class HomePage extends StatelessWidget {
                       height: secondBarHeight,
                       child: Row(
                         children: const [
-                          SecondPartBar(iconName: 'mezun.png',),
+                          SecondPartBar(
+                            iconName: 'mezun.png',
+                            barInfo1: 'Gain world-class education to',
+                            barInfo2: 'expand your technical knowledge',
+                          ),
                           SizedBox(
                             width: 40,
                           ),
-                          SecondPartBar(),
+                          SecondPartBar(
+                            iconName: 'settings.png',
+                            barInfo1: 'Get hands-on training to acquire',
+                            barInfo2: 'practical skills',
+                          ),
                           SizedBox(
                             width: 40,
                           ),
-                          SecondPartBar(),
+                          SecondPartBar(
+                            iconName: 'people.png',
+                            barInfo1: 'Learn from acollaborative community',
+                            barInfo2: 'of peers and mentors',
+                          ),
                           SizedBox(
                             width: 5,
                           ),
