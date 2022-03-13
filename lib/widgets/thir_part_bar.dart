@@ -11,13 +11,24 @@ class ThirdPartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container( child: CircleAvatar(child: Image.asset('name')),
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(6)),
-            color: Color(0xFF32849c),
-          ),
-          height: 220,
-          width: barWidth,
+        Stack(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(6)),
+                color: Color(0xFF32849c),
+              ),
+              height: 220,
+              width: barWidth,
+            ),
+            Container(
+              height: 80,
+              width: 80,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle,),
+              child: Image.asset('images/musk.webp'),
+            )
+          ],
         ),
         const SizedBox(
           width: 20,
