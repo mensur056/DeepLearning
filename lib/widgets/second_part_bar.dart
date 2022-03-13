@@ -59,7 +59,7 @@ class SecondPartBar extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 80,
+          left: 85,
           top: 50,
           child: Container(
             child: Image.asset("images/$iconName"),

@@ -213,7 +213,7 @@ class HomePage extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                     color: Colors.lightGreen,
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(5))),
+                                        BorderRadius.all(Radius.circular(8))),
                                 height: 60,
                                 width: 300,
                               )

@@ -11,7 +11,7 @@ class ThirdPartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
+        Container( child: CircleAvatar(child: Image.asset('name')),
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(6)),
             color: Color(0xFF32849c),
