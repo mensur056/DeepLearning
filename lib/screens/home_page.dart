@@ -192,11 +192,18 @@ class HomePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const ThirdPartBar(),
+                              const ThirdPartBar(
+                                  title1: 'Al For Everyone',
+                                  title2: 'Deep Learning\nSpecialization'),
                               const SizedBox(
                                 height: 30,
                               ),
-                              const ThirdPartBar(),
+                              const ThirdPartBar(
+                                title1:
+                                    'Practical Data Science\n(PDS) Specialization',
+                                title2:
+                                    'Machine Learning\nEngineering for\nProduction (MLOps)\nSpecialization',
+                              ),
                               const SizedBox(
                                 height: 50,
                               ),
