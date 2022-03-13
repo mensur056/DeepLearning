@@ -201,6 +201,15 @@ class HomePage extends StatelessWidget {
                                 height: 50,
                               ),
                               Container(
+                                child: const Center(
+                                  child: Text(
+                                    'See All Programs',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20),
+                                  ),
+                                ),
                                 decoration: const BoxDecoration(
                                     color: Colors.lightGreen,
                                     borderRadius:
