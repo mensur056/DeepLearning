@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                       height: secondBarHeight,
                       child: Row(
                         children: const [
-                          SecondPartBar(),
+                          SecondPartBar(iconName: 'mezun.png',),
                           SizedBox(
                             width: 40,
                           ),

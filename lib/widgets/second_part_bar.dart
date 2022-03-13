@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class SecondPartBar extends StatelessWidget {
   const SecondPartBar({
-    Key? key,
+    Key? key, required this.iconName,
   }) : super(key: key);
-
+final String iconName;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -36,7 +36,7 @@ class SecondPartBar extends StatelessWidget {
           left: 80,
           top: 50,
           child: Container(
-            child: Image.asset(name),
+            child: Image.asset("images/$iconName"),
             decoration: const BoxDecoration(
                 shape: BoxShape.circle, color: Color(0xFFbee6ea)),
             height: 150,
