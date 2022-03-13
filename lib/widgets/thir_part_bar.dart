@@ -13,7 +13,7 @@ class ThirdPartBar extends StatelessWidget {
       children: [
         Container(
           color: Colors.green,
-          height: 200,
+          height: 220,
           width: barWidth,
         ),
         const SizedBox(
@@ -21,7 +21,7 @@ class ThirdPartBar extends StatelessWidget {
         ),
         Container(
           color: Colors.green,
-          height: 200,
+          height: 220,
           width: barWidth,
         ),
       ],

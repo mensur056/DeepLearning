@@ -183,27 +183,30 @@ class HomePage extends StatelessWidget {
                     ),
                     Container(
                       color: Colors.red,
-                      width: 921,
+                      width: 1050,
                       height: 670,
                       child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const ThirdPartBar(),
-                            const SizedBox(
-                              height: 30,
-                            ),
-                            const ThirdPartBar(),
-                            const SizedBox(
-                              height: 50,
-                            ),
-                            Container(
-                              color: Colors.blue,
-                              height: 60,
-                              width: 300,
-                            )
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 14.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const ThirdPartBar(),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              const ThirdPartBar(),
+                              const SizedBox(
+                                height: 50,
+                              ),
+                              Container(
+                                color: Colors.blue,
+                                height: 60,
+                                width: 300,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -243,4 +246,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
