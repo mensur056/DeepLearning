@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class SecondPartBar extends StatelessWidget {
   const SecondPartBar({
     Key? key,
@@ -17,7 +18,16 @@ class SecondPartBar extends StatelessWidget {
           top: 125,
           bottom: 50,
           child: Container(
-            color: Colors.grey,
+            decoration: const BoxDecoration(
+              color: Color(0xFFf0f6f9),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  offset: Offset(0.0, 1.0), //(x,y)
+                  blurRadius: 6.0,
+                ),
+              ],
+            ),
             height: 200,
             width: 320,
           ),
@@ -27,8 +37,7 @@ class SecondPartBar extends StatelessWidget {
           top: 50,
           child: Container(
             decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.green),
+                shape: BoxShape.circle, color: Colors.green),
             height: 150,
             width: 150,
           ),

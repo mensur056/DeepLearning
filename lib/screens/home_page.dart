@@ -145,7 +145,9 @@ class HomePage extends StatelessWidget {
                           SizedBox(
                             width: 20,
                           ),
-                          SecondPartBar(),
+                          SecondPartBar(), SizedBox(
+                            width: 10,
+                          ),
                         ],
                       ),
                     ),
