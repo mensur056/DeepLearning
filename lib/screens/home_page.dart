@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
 import '../widgets/app_bar_titles.dart';
+import '../widgets/second_part_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -129,74 +130,29 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: Container(
-                          color: Colors.black, height: secondBarHeight),
+                          color: Colors.white, height: secondBarHeight),
                     ),
                     Container(
                       color: Colors.white,
                       height: secondBarHeight,
                       child: Row(
-                        children: [
-                          Stack(
-                            children: [
-                              Container(
-                                height: 250,
-                                width: 300,
-                                color: Colors.red,
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.green),
-                                height: 160,
-                                width: 160,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
+                        children: const [
+                          SecondPartBar(),
+                          SizedBox(
                             width: 20,
                           ),
-                          Stack(
-                            children: [
-                              Container(
-                                height: 250,
-                                width: 300,
-                                color: Colors.red,
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.green),
-                                height: 160,
-                                width: 160,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
+                          SecondPartBar(),
+                          SizedBox(
                             width: 20,
                           ),
-                          Stack(
-                            children: [
-                              Container(
-                                height: 250,
-                                width: 300,
-                                color: Colors.red,
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.green),
-                                height: 160,
-                                width: 160,
-                              ),
-                            ],
-                          ),
+                          SecondPartBar(),
                         ],
                       ),
                     ),
                     Expanded(
                       flex: 2,
                       child: Container(
-                        color: Colors.black,
+                        color: Colors.white,
                         height: secondBarHeight,
                       ),
                     ),
@@ -251,3 +207,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
