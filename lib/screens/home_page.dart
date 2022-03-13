@@ -79,8 +79,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                          color: Colors.greenAccent,
-                           height: firstBarHeight),
+                          color: Colors.greenAccent, height: firstBarHeight),
                     ),
                     Expanded(
                       flex: 10,
@@ -90,32 +89,33 @@ class HomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                SizedBox(
-                                  height: 150,
-                                ),
-                                Text(
-                                  'Build your AI career',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 60,
-                                      fontFamily: 'Poppins'),
-                                ),
-                                Text(
-                                  'with DeepLearning.AI',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 40),
-                                )
-                              ],
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  SizedBox(
+                                    height: 125,
+                                  ),
+                                  Text(
+                                    'Build your AI career',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 50,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                  Text(
+                                    'with DeepLearning.AI',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 35),
+                                  )
+                                ],
+                              ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left:80.0),
+                              padding: const EdgeInsets.only(left: 80.0),
                               child: Image.asset(
                                 'images/logoooo.png',
-
                               ),
                             )
                           ],
