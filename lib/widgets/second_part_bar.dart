@@ -36,8 +36,9 @@ class SecondPartBar extends StatelessWidget {
           left: 80,
           top: 50,
           child: Container(
+            child: Image.asset(name),
             decoration: const BoxDecoration(
-                shape: BoxShape.circle, color: Colors.green),
+                shape: BoxShape.circle, color: Color(0xFFbee6ea)),
             height: 150,
             width: 150,
           ),

@@ -139,14 +139,15 @@ class HomePage extends StatelessWidget {
                         children: const [
                           SecondPartBar(),
                           SizedBox(
-                            width: 20,
+                            width: 40,
                           ),
                           SecondPartBar(),
                           SizedBox(
-                            width: 20,
+                            width: 40,
                           ),
-                          SecondPartBar(), SizedBox(
-                            width: 10,
+                          SecondPartBar(),
+                          SizedBox(
+                            width: 5,
                           ),
                         ],
                       ),
@@ -209,5 +210,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
