@@ -12,7 +12,10 @@ class ThirdPartBar extends StatelessWidget {
     return Row(
       children: [
         Container(
-          color: Colors.green,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+            color: Color(0xFF32849c),
+          ),
           height: 220,
           width: barWidth,
         ),
@@ -20,7 +23,10 @@ class ThirdPartBar extends StatelessWidget {
           width: 20,
         ),
         Container(
-          color: Colors.green,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+            color: Color(0xFF32849c),
+          ),
           height: 220,
           width: barWidth,
         ),

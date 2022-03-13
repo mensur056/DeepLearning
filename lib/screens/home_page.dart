@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
                           height: thirdBarHeight),
                     ),
                     Container(
-                      color: Color(0xFFf0f6f9),
+                      color: const Color(0xFFf0f6f9),
                       width: 1050,
                       height: 670,
                       child: Center(
@@ -201,7 +201,10 @@ class HomePage extends StatelessWidget {
                                 height: 50,
                               ),
                               Container(
-                                color: Colors.blue,
+                                decoration: const BoxDecoration(
+                                    color: Colors.lightGreen,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5))),
                                 height: 60,
                                 width: 300,
                               )
@@ -246,4 +249,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
