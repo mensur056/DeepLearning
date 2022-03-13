@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class SecondPartBar extends StatelessWidget {
   const SecondPartBar({
     Key? key,
-    required this.iconName, required this.barInfo1, required this.barInfo2,
+    required this.iconName,
+    required this.barInfo1,
+    required this.barInfo2,
   }) : super(key: key);
   final String iconName;
   final String barInfo1;
@@ -23,15 +25,23 @@ class SecondPartBar extends StatelessWidget {
           bottom: 50,
           child: Container(
             child: Column(
-              children:  [
+              children: [
                 const SizedBox(
                   height: 100,
                 ),
                 Text(
-                 barInfo1,
-                  style: const TextStyle(color: Colors.black, fontSize: 18),
+                  barInfo1,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
-                Text(barInfo2)
+                Text(
+                  barInfo2,
+                  style: const TextStyle(fontSize: 20,
+                    color: Colors.black,
+                  ),
+                )
               ],
             ),
             decoration: const BoxDecoration(

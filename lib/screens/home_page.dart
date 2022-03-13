@@ -155,8 +155,8 @@ class HomePage extends StatelessWidget {
                           ),
                           SecondPartBar(
                             iconName: 'people.png',
-                            barInfo1: 'Learn from acollaborative community',
-                            barInfo2: 'of peers and mentors',
+                            barInfo1: 'Learn from a collaborative ',
+                            barInfo2: 'community of peers',
                           ),
                           SizedBox(
                             width: 5,
