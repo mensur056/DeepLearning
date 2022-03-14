@@ -237,26 +237,30 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                          color: Colors.white, height: fourthBarHeight),
-                    ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.white,
-                        height: fourthBarHeight,
+                Container(
+                  height: fourthBarHeight,
+                  color: const Color(0xFF046a63),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('images/mail-download.gif',
+                          width: 800, height: 600, fit: BoxFit.cover),
+                      const Spacer(),
+                      Container(
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(6))),
+                        height: 650,
+                        width: 500,
                       ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.white,
-                        height: fourthBarHeight,
-                      ),
-                    ),
-                  ],
-                ),
+                      Expanded(
+                        child: Container(
+                          color: const Color(0xFF046a63),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ],
