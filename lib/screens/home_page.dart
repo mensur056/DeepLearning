@@ -500,6 +500,11 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
+                ),
+                Container(
+                  color: Colors.white,
+                  height: 500,
+                  width: double.infinity,
                 )
               ],
             ),
