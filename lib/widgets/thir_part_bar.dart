@@ -39,9 +39,11 @@ class ThirdPartBar extends StatelessWidget {
               top: 25,
               right: 25,
               child: Container(
+                decoration: const BoxDecoration(
+                    color: Color(0xFFa9e5f6),
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
                 height: 150,
                 width: 200,
-                color: const Color(0xFFa9e5f6),
               ),
             ),
             Positioned(
@@ -78,13 +80,16 @@ class ThirdPartBar extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
-            ),  Positioned(
+            ),
+            Positioned(
               top: 25,
               right: 25,
               child: Container(
+                decoration: const BoxDecoration(
+                    color: Color(0xFFa9e5f6),
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
                 height: 150,
                 width: 200,
-                color: const Color(0xFFa9e5f6),
               ),
             ),
             Positioned(
