@@ -26,13 +26,22 @@ class ThirdPartBar extends StatelessWidget {
               width: barWidth,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, top: 15),
               child: Text(
                 title1,
                 style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
+              ),
+            ),
+            Positioned(
+              top: 25,
+              right: 25,
+              child: Container(
+                height: 150,
+                width: 200,
+                color: const Color(0xFFa9e5f6),
               ),
             ),
             Positioned(
@@ -61,13 +70,21 @@ class ThirdPartBar extends StatelessWidget {
               width: barWidth,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, top: 15),
               child: Text(
                 title2,
                 style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
+              ),
+            ),  Positioned(
+              top: 25,
+              right: 25,
+              child: Container(
+                height: 150,
+                width: 200,
+                color: const Color(0xFFa9e5f6),
               ),
             ),
             Positioned(

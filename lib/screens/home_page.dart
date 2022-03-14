@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Expanded(
-                              flex: 1,
+                              flex: 2,
                               child: Container(
                                 color: Colors.greenAccent,
                               ),
