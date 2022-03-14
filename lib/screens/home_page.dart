@@ -6,8 +6,15 @@ import '../widgets/app_bar_titles.dart';
 import '../widgets/second_part_bar.dart';
 import '../widgets/thir_part_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool value = false;
 
   @override
   Widget build(BuildContext context) {
@@ -274,12 +281,23 @@ class HomePage extends StatelessWidget {
                                 SizedBox(
                                   width: 25,
                                 ),
-                                Text('First name'),
-                                SizedBox(
-                                  width: 170,
+                                Text(
+                                  'First name',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 18),
                                 ),
-                                Text('Last name'),
+                                SizedBox(
+                                  width: 150,
+                                ),
+                                Text(
+                                  'Last name',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 18),
+                                ),
                               ],
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Row(
                               children: const [
@@ -289,6 +307,7 @@ class HomePage extends StatelessWidget {
                                 Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
+                                        hintText: 'ex. John',
                                         border: OutlineInputBorder()),
                                   ),
                                 ),
@@ -298,6 +317,7 @@ class HomePage extends StatelessWidget {
                                 Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
+                                        hintText: 'ex. Smith',
                                         border: OutlineInputBorder()),
                                   ),
                                 ),
@@ -305,7 +325,115 @@ class HomePage extends StatelessWidget {
                                   width: 30,
                                 ),
                               ],
-                            )
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                              child: Text(
+                                'Email',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        hintText: 'ex. johnsmith@gmail.com',
+                                        border: OutlineInputBorder()),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                              child: Text(
+                                'Job Title',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        hintText: 'ex. Software Engineer',
+                                        border: OutlineInputBorder()),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                              child: Text(
+                                'Country',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        hintText: 'Please Select',
+                                        border: OutlineInputBorder()),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                const SizedBox(
+                                  width: 25,
+                                ),
+                                Checkbox(
+                                  value: this.value,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      this.value = value!;
+                                    });
+                                  },
+                                ), //Checkbox
+                                const Text(
+                                  'I want to get the latest news, courses, and events',
+                                  style: TextStyle(fontSize: 17.0),
+                                ), //Text
+                                SizedBox(width: 10), //SizedBox
+                                /** Checkbox Widget **/
+                              ], //<Widget>[]
+                            ),
                           ],
                         ),
                       ),
