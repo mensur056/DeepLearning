@@ -15,7 +15,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool value = false;
-  String dropdownValue = 'Please Selected Country                                                                   ';
+  String dropdownValue =
+      'Please Selected Country                                                                          ';
 
   // List<DropdownMenuItem<String>> get dropdownItems {
   //   List<DropdownMenuItem<String>> menuItems = [
@@ -268,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.all(Radius.circular(6))),
-                        height: 650,
+                        height: 600,
                         width: 500,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -411,10 +412,10 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 DropdownButton<String>(
                                   value: dropdownValue,
-                                  icon: const Icon(Icons.keyboard_arrow_down_sharp),
+                                  icon: const Icon(
+                                      Icons.keyboard_arrow_down_sharp),
                                   elevation: 16,
-                                  style:
-                                      const TextStyle(color: Colors.grey),
+                                  style: const TextStyle(color: Colors.black),
                                   underline: Container(
                                     height: 2,
                                     color: Colors.deepPurpleAccent,
@@ -426,8 +427,12 @@ class _HomePageState extends State<HomePage> {
                                       },
                                     );
                                   },
-                                  items: <String>['Please Selected Country                                                                   ','Azerbaijan', 'America', 'Africa']
-                                      .map<DropdownMenuItem<String>>(
+                                  items: <String>[
+                                    'Please Selected Country                                                                          ',
+                                    'Azerbaijan',
+                                    'America',
+                                    'Africa'
+                                  ].map<DropdownMenuItem<String>>(
                                     (String value) {
                                       return DropdownMenuItem<String>(
                                         value: value,
@@ -465,6 +470,26 @@ class _HomePageState extends State<HomePage> {
                                 /** Checkbox Widget **/
                               ], //<Widget>[]
                             ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 160.0, top: 15),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                  color: Colors.red,
+                                ),
+                                height: 60,
+                                width: 180,
+                                child: const Center(
+                                  child: Text(
+                                    'Submit',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),
