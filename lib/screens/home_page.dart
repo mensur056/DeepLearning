@@ -252,6 +252,48 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.all(Radius.circular(6))),
                         height: 650,
                         width: 500,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(left: 25.0, top: 15),
+                              child: Text(
+                                'Stay updated with the latest AI courses, news, \nand events.',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontSize: 20),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: const [
+                                SizedBox(
+                                  width: 25,
+                                ), Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        border: OutlineInputBorder()),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        border: OutlineInputBorder()),
+                                  ),
+                                ), SizedBox(
+                                  width: 30,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                       Expanded(
                         child: Container(
