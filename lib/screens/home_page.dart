@@ -273,7 +273,20 @@ class HomePage extends StatelessWidget {
                               children: const [
                                 SizedBox(
                                   width: 25,
-                                ), Expanded(
+                                ),
+                                Text('First name'),
+                                SizedBox(
+                                  width: 170,
+                                ),
+                                Text('Last name'),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: OutlineInputBorder()),
@@ -287,7 +300,8 @@ class HomePage extends StatelessWidget {
                                     decoration: InputDecoration(
                                         border: OutlineInputBorder()),
                                   ),
-                                ), SizedBox(
+                                ),
+                                SizedBox(
                                   width: 30,
                                 ),
                               ],
