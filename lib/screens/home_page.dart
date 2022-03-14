@@ -15,6 +15,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool value = false;
+  String dropdownValue = 'Please Selected Country                                                                   ';
+
+  // List<DropdownMenuItem<String>> get dropdownItems {
+  //   List<DropdownMenuItem<String>> menuItems = [
+  //     const DropdownMenuItem(child: Text("USA"), value: "USA"),
+  //     const DropdownMenuItem(child: Text("Canada"), value: "Canada"),
+  //     const DropdownMenuItem(child: Text("Brazil"), value: "Brazil"),
+  //     const DropdownMenuItem(child: Text("England"), value: "England"),
+  //   ];
+  //   return menuItems;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -296,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Row(
@@ -394,23 +405,43 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Row(
-                              children: const [
-                                SizedBox(
+                              children: [
+                                const SizedBox(
                                   width: 25,
                                 ),
-                                Expanded(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        hintText: 'Please Select',
-                                        border: OutlineInputBorder()),
+                                DropdownButton<String>(
+                                  value: dropdownValue,
+                                  icon: const Icon(Icons.keyboard_arrow_down_sharp),
+                                  elevation: 16,
+                                  style:
+                                      const TextStyle(color: Colors.grey),
+                                  underline: Container(
+                                    height: 2,
+                                    color: Colors.deepPurpleAccent,
                                   ),
+                                  onChanged: (String? newValue) {
+                                    setState(
+                                      () {
+                                        dropdownValue = newValue!;
+                                      },
+                                    );
+                                  },
+                                  items: <String>['Please Selected Country                                                                   ','Azerbaijan', 'America', 'Africa']
+                                      .map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                      return DropdownMenuItem<String>(
+                                        value: value,
+                                        child: Text(value),
+                                      );
+                                    },
+                                  ).toList(),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 30,
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Row(
@@ -430,7 +461,7 @@ class _HomePageState extends State<HomePage> {
                                   'I want to get the latest news, courses, and events',
                                   style: TextStyle(fontSize: 17.0),
                                 ), //Text
-                                SizedBox(width: 10), //SizedBox
+                                const SizedBox(width: 10), //SizedBox
                                 /** Checkbox Widget **/
                               ], //<Widget>[]
                             ),
