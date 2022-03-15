@@ -503,21 +503,37 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Container(
                   color: Colors.white,
-                  height: 500,
+                  height: 600,
                   width: double.infinity,
                   child: Row(
                     children: [
                       Expanded(
                         child: Container(
-                          color: Colors.red,
+                          color: Colors.white,
                         ),
-                      ),  Expanded(flex: 4,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
                         child: Container(
-                          color: Colors.blue,
+                          decoration: const BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  spreadRadius: 8,
+                                  blurRadius: 6,
+                                  offset: Offset(0, 4),
+                                )
+                              ],
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15))),
+                          width: 1000,
+                          height: 500,
                         ),
-                      ),  Expanded(
+                      ),
+                      Expanded(
                         child: Container(
-                          color: Colors.red,
+                          color: Colors.white,
                         ),
                       )
                     ],
