@@ -505,7 +505,24 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   height: 500,
                   width: double.infinity,
-                )
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          color: Colors.red,
+                        ),
+                      ),  Expanded(flex: 4,
+                        child: Container(
+                          color: Colors.blue,
+                        ),
+                      ),  Expanded(
+                        child: Container(
+                          color: Colors.red,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ],
