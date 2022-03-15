@@ -87,11 +87,17 @@ class FourthPartBar extends StatelessWidget {
                             'Workera’s free assessments help you identify the skills you need for the AI roles you want, providing the feedback, resources, and credentials to successfully showcase your skillset.',
                             style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Container(
-                            decoration: BoxDecoration(
+                            child: const Center(
+                                child: Text(
+                              'Learn More',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            )),
+                            decoration: const BoxDecoration(
                                 color: Colors.red,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(8))),
