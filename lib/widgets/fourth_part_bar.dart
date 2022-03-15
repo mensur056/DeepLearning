@@ -25,8 +25,8 @@ class FourthPartBar extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
-                      spreadRadius: 8,
-                      blurRadius: 6,
+                      spreadRadius: 2,
+                      blurRadius: 2,
                       offset: Offset(0, 4),
                     )
                   ],
@@ -39,40 +39,69 @@ class FourthPartBar extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(40),
+                        padding: const EdgeInsets.only(left: 60),
                         child: Image.asset(
                           'images/Workera.webp',
                           height: 220,
-                          width: 350,
+                          width: 300,
                         ),
                       ),
                       Expanded(
-                        child: Column(
-                          children: const [
-                            Text(
-                              'Don’t know where to start? Test your current abilities and create your personalized learning pathway to become a machine learning expert.',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            Text(
-                              'Already an ML practitioner? Make sure that you’re up to date with the latest techniques and advance your career by identifying your next steps.',
-                              style: TextStyle(color: Colors.black),
-                            )
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 60.0, right: 20),
+                          child: Column(
+                            children: const [
+                              Text(
+                                'Don’t know where to start? Test your current abilities and create your personalized learning pathway to become a machine learning expert.',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 20),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                'Already an ML practitioner? Make sure that you’re up to date with the latest techniques and advance your career by identifying your next steps.',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 20),
+                              )
+                            ],
+                          ),
                         ),
                       )
                     ],
                   ),
-                  const Divider(
-                    height: 1,
-                    color: Colors.black,
+                  const Padding(
+                    padding: EdgeInsets.only(left: 60.0, right: 60),
+                    child: Divider(
+                      height: 1,
+                      color: Colors.grey,
+                    ),
                   ),
-                  const Text(
-                      'Workera’s free assessments help you identify the skills you need for the AI roles you want, providing the feedback, resources, and credentials to successfully showcase your skillset.'),
-                  Container(
-                    height: 60,
-                    width: 180,
-                    color: Colors.red,
-                  )
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 150.0, right: 150),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Workera’s free assessments help you identify the skills you need for the AI roles you want, providing the feedback, resources, and credentials to successfully showcase your skillset.',
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            height: 60,
+                            width: 180,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
