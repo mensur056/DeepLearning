@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
 import '../widgets/app_bar_titles.dart';
+import '../widgets/fifth_part_bar.dart';
 import '../widgets/fourth_part_bar.dart';
 import '../widgets/second_part_bar.dart';
 import '../widgets/thir_part_bar.dart';
@@ -503,6 +504,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const FourthPartBar(),
+                const FifthPartBar()
               ],
             ),
           ],
