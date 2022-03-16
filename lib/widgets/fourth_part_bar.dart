@@ -84,7 +84,7 @@ class FourthPartBar extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text(
-                            'Workera’s free assessments help you identify the skills you need for the AI roles you want, providing the feedback, resources, and credentials to successfully showcase your skillset.',
+                            'Workera’s free assessments help you identify the skills you need for the\nAI roles you want, providing the feedback, resources, and credentials to\n                                successfully showcase your skillset.',
                             style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                           const SizedBox(
@@ -92,11 +92,12 @@ class FourthPartBar extends StatelessWidget {
                           ),
                           Container(
                             child: const Center(
-                                child: Text(
-                              'Learn More',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            )),
+                              child: Text(
+                                'Learn More',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                            ),
                             decoration: const BoxDecoration(
                                 color: Colors.red,
                                 borderRadius:
