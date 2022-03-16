@@ -19,6 +19,13 @@ class ThirdPartBar extends StatelessWidget {
           children: [
             Container(
               decoration: const BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blueAccent,
+                    blurRadius: 9,
+                    offset: Offset(4, 8), // Shadow position
+                  ),
+                ],
                 borderRadius: BorderRadius.all(Radius.circular(6)),
                 color: Color(0xFF32849c),
               ),
@@ -64,7 +71,13 @@ class ThirdPartBar extends StatelessWidget {
         Stack(
           children: [
             Container(
-              decoration: const BoxDecoration(
+              decoration: const BoxDecoration( boxShadow: [
+                BoxShadow(
+                  color: Colors.blueAccent,
+                  blurRadius: 9,
+                  offset: Offset(4, 8), // Shadow position
+                ),
+              ],
                 borderRadius: BorderRadius.all(Radius.circular(6)),
                 color: Color(0xFF32849c),
               ),
