@@ -13,12 +13,15 @@ class _OnHoverButtonState extends State<OnHoverButton> {
 
   @override
   Widget build(BuildContext context) {
+    final hoveredTransform = Matrix4.identity()..translate(0, -8, 0);
+    final transform = isHovered ? hoveredTransform : Matrix4.identity();
     return MouseRegion(
       onEnter: (event) => onEntered(true),
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
         child: widget.child,
         duration: const Duration(milliseconds: 200),
+        transform: transform,
       ),
     );
   }
