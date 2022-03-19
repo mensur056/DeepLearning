@@ -1,4 +1,5 @@
 import 'package:deep_learning/constants.dart';
+import 'package:deep_learning/widgets/on_hover_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
@@ -19,16 +20,6 @@ class _HomePageState extends State<HomePage> {
   bool value = false;
   String dropdownValue =
       'Please Selected Country                                                                          ';
-
-  // List<DropdownMenuItem<String>> get dropdownItems {
-  //   List<DropdownMenuItem<String>> menuItems = [
-  //     const DropdownMenuItem(child: Text("USA"), value: "USA"),
-  //     const DropdownMenuItem(child: Text("Canada"), value: "Canada"),
-  //     const DropdownMenuItem(child: Text("Brazil"), value: "Brazil"),
-  //     const DropdownMenuItem(child: Text("England"), value: "England"),
-  //   ];
-  //   return menuItems;
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -228,26 +219,28 @@ class _HomePageState extends State<HomePage> {
                               const SizedBox(
                                 height: 50,
                               ),
-                              HoverContainer(
-                                hoverDecoration: const BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(8))),
-                                child: const Center(
-                                  child: Text(
-                                    'See All Programs',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
+                              OnHoverButton(
+                                child: HoverContainer(
+                                  hoverDecoration: const BoxDecoration(
+                                      color: Colors.green,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(8))),
+                                  child: const Center(
+                                    child: Text(
+                                      'See All Programs',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    ),
                                   ),
+                                  decoration: const BoxDecoration(
+                                      color: Colors.lightGreen,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(8))),
+                                  height: 60,
+                                  width: 300,
                                 ),
-                                decoration: const BoxDecoration(
-                                    color: Colors.lightGreen,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(8))),
-                                height: 60,
-                                width: 300,
                               )
                             ],
                           ),
