@@ -1,4 +1,5 @@
 import 'package:deep_learning/constants.dart';
+import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:deep_learning/widgets/on_hover_button.dart';
@@ -10,7 +11,7 @@ import '../widgets/fifth_part_bar.dart';
 import '../widgets/first_part_bar.dart';
 import '../widgets/fourth_part_bar.dart';
 import '../widgets/second_part_bar.dart';
-import '../widgets/thir_part_bar.dart';
+import '../widgets/third_part_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const TheBatchScreen()));
+                            builder: (context) => const BlogScreen()));
                   },
                   title: 'Blog',
                   font: 'Fredokat',

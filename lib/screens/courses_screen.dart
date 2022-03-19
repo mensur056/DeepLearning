@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/home_page.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:deep_learning/widgets/app_bar_titles.dart';
@@ -50,10 +51,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const TheBatchScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
                   },
                   title: 'The Batch',
                   font: 'Fredokat',
@@ -63,10 +64,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const TheBatchScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BlogScreen()));
                   },
                   title: 'Blog',
                   font: 'Fredokat',

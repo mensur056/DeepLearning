@@ -1,3 +1,5 @@
+import 'package:deep_learning/screens/blog_screen.dart';
+import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
@@ -38,57 +40,60 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 const SizedBox(
                   width: 35,
                 ),
-                 AppBarTitles(title: 'Courses', font: 'Fredokat',  onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },),
+                AppBarTitles(
+                  title: 'Courses',
+                  font: 'Fredokat',
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CoursesScreen()));
+                  },
+                ),
                 const SizedBox(
                   width: 35,
                 ),
-                 AppBarTitles(  onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
+                AppBarTitles(
+                  onPressed: () {},
                   title: 'The Batch',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                 AppBarTitles(  onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BlogScreen()));
+                  },
                   title: 'Blog',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                AppBarTitles(  onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Events',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                 AppBarTitles(  onPressed: () {
-                   Navigator.push(
-                       context,
-                       MaterialPageRoute(
-                           builder: (context) => const TheBatchScreen()));
-                 },
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Company',
                   font: 'Fredokat',
                 ),
@@ -116,7 +121,8 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
           children: [
             Column(
               children: const [
-                FirstPartBar(fontSize: 50,
+                FirstPartBar(
+                  fontSize: 50,
                   color: Colors.lightBlueAccent,
                   color1: Colors.lightBlueAccent,
                   image: 'images/logoooo2.png',
