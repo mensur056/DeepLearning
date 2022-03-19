@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppBarTitles extends StatelessWidget {
@@ -14,15 +15,20 @@ class AppBarTitles extends StatelessWidget {
     return TextButton(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
-            (Set<MaterialState> states) {
-          if (states.contains(MaterialState.hovered)) {
-            return Colors.red;
-          }
+                (Set<MaterialState> states) {
+              if (states.contains(MaterialState.hovered)) {
+                return Colors.red;
+              }
 
-          return Colors.black;
-        }),
+              return Colors.black;
+            }),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const CoursesScreen()),
+        );
+      },
       child: Text(
         title,
         style: TextStyle(

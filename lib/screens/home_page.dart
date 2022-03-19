@@ -5,6 +5,7 @@ import 'package:hovering/hovering.dart';
 
 import '../widgets/app_bar_titles.dart';
 import '../widgets/fifth_part_bar.dart';
+import '../widgets/first_part_bar.dart';
 import '../widgets/fourth_part_bar.dart';
 import '../widgets/second_part_bar.dart';
 import '../widgets/thir_part_bar.dart';
@@ -89,55 +90,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        color: Colors.greenAccent,
-                        height: firstBarHeight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: Container(
-                                color: Colors.greenAccent,
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                SizedBox(
-                                  height: 150,
-                                ),
-                                Text(
-                                  'Build your AI career',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 60,
-                                      fontFamily: 'Poppins'),
-                                ),
-                                Text(
-                                  'with DeepLearning.AI',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 30),
-                                )
-                              ],
-                            ),
-                            Expanded(
-                              flex: 5,
-                              child: Image.asset(
-                                'images/logoooo.png',
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                const FirstPartBar(),
                 Row(
                   children: [
                     Expanded(
@@ -510,3 +463,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
