@@ -29,8 +29,10 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const HomePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   },
                 ),
                 const SizedBox(
@@ -89,16 +91,18 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
           children: [
             Column(
               children: const [
-                FirstPartBar(
+                FirstPartBar(fontSize: 50,
                   color: Colors.lightBlueAccent,
                   color1: Colors.lightBlueAccent,
-                  image: 'images/logoooo2.png',title: 'The Batch: Weekly AI news for engineers, ',title1: 'executives, and enthusiasts.',
+                  image: 'images/logoooo2.png',
+                  title: 'The Batch: Weekly AI news ',
+                  title1: 'for engineers,executives.',
                 )
               ],
             )
           ],
         ),
       ),
-    );;
+    );
   }
 }

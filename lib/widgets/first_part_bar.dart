@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1,
+    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1, required this.fontSize,
   }) : super(key: key);
 final Color color;
 final Color color1;
 final String image;
 final String title;
 final String title1;
+final double fontSize;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -36,10 +37,10 @@ final String title1;
                     ),
                     Text(
                       title,
-                      style: const TextStyle(
+                      style:  TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 50,
+                          fontSize: fontSize,
                           fontFamily: 'Poppins'),
                     ),
                      Text(
