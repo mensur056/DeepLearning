@@ -38,32 +38,57 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(title: 'Courses', font: 'Fredokat'),
+                 AppBarTitles(title: 'Courses', font: 'Fredokat',  onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TheBatchScreen()));
+                },),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                 AppBarTitles(  onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TheBatchScreen()));
+                },
                   title: 'The Batch',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                 AppBarTitles(  onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TheBatchScreen()));
+                },
                   title: 'Blog',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(  onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TheBatchScreen()));
+                },
                   title: 'Events',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                 AppBarTitles(  onPressed: () {
+                   Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                           builder: (context) => const TheBatchScreen()));
+                 },
                   title: 'Company',
                   font: 'Fredokat',
                 ),

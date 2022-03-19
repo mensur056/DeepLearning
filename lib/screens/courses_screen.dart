@@ -1,4 +1,5 @@
 import 'package:deep_learning/screens/home_page.dart';
+import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:deep_learning/widgets/app_bar_titles.dart';
 import 'package:deep_learning/widgets/first_part_bar.dart';
 import 'package:flutter/material.dart';
@@ -28,39 +29,71 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const HomePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   },
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(title: 'Courses', font: 'Fredokat'),
+                AppBarTitles(
+                  title: 'Courses',
+                  font: 'Fredokat',
+                  onPressed: () {
+
+                  },
+                ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'The Batch',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Blog',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Events',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Company',
                   font: 'Fredokat',
                 ),
@@ -88,10 +121,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
           children: [
             Column(
               children: const [
-                FirstPartBar(fontSize: 50,
+                FirstPartBar(
+                  fontSize: 50,
                   color: Colors.redAccent,
                   color1: Colors.redAccent,
-                  image: 'images/logoooo1.png',title: 'Gain the knowledge and ',title1: 'skills for an AI career',
+                  image: 'images/logoooo1.png',
+                  title: 'Gain the knowledge and ',
+                  title1: 'skills for an AI career',
                 )
               ],
             )

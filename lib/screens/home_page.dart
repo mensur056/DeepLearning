@@ -1,4 +1,6 @@
 import 'package:deep_learning/constants.dart';
+import 'package:deep_learning/screens/courses_screen.dart';
+import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:deep_learning/widgets/on_hover_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
@@ -37,32 +39,65 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(title: 'Courses', font: 'Fredokat'),
+                AppBarTitles(
+                  title: 'Courses',
+                  font: 'Fredokat',
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CoursesScreen()));
+                  },
+                ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'The Batch',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Blog',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Events',
                   font: 'Fredokat',
                 ),
                 const SizedBox(
                   width: 35,
                 ),
-                const AppBarTitles(
+                AppBarTitles(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'Company',
                   font: 'Fredokat',
                 ),
@@ -90,10 +125,13 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                const FirstPartBar(fontSize: 50,
-                  color: Colors.lightGreen,
-                  color1: Colors.lightGreen,image: 'images/logoooo.png',title: 'Build your AI career',title1:'with DeepLearning.AI'
-                ),
+                const FirstPartBar(
+                    fontSize: 50,
+                    color: Colors.lightGreen,
+                    color1: Colors.lightGreen,
+                    image: 'images/logoooo.png',
+                    title: 'Build your AI career',
+                    title1: 'with DeepLearning.AI'),
                 Row(
                   children: [
                     Expanded(

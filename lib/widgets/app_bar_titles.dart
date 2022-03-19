@@ -1,5 +1,4 @@
-import 'package:deep_learning/screens/courses_screen.dart';
-import 'package:deep_learning/screens/the_batch_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class AppBarTitles extends StatelessWidget {
@@ -7,9 +6,11 @@ class AppBarTitles extends StatelessWidget {
     Key? key,
     required this.title,
     required this.font,
+    required this.onPressed,
   }) : super(key: key);
   final String title;
   final String font;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +25,7 @@ class AppBarTitles extends StatelessWidget {
           return Colors.black;
         }),
       ),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) =>title=='The Batch'?const TheBatchScreen():const CoursesScreen()),
-        );
-      },
+      onPressed:onPressed,
       child: Text(
         title,
         style: TextStyle(
