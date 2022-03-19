@@ -1,4 +1,5 @@
 import 'package:deep_learning/widgets/app_bar_titles.dart';
+import 'package:deep_learning/widgets/first_part_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
@@ -79,7 +80,21 @@ class _CoursesScreenState extends State<CoursesScreen> {
             ),
           ),
         ],
-      ),body: SafeArea(child: ListView(children: [],)),
+      ),
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Column(
+              children: const [
+                FirstPartBar(
+                  color: Colors.red,
+                  color1: Colors.red,
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }

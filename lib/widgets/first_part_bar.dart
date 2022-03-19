@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key,
+    Key? key, required this.color, required this.color1,
   }) : super(key: key);
-
+final Color color;
+final Color color1;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
           child: Container(
-            color: Colors.greenAccent,
+            color:color,
             height: firstBarHeight,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -21,7 +22,7 @@ class FirstPartBar extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    color: Colors.greenAccent,
+                    color: color1,
                   ),
                 ),
                 Column(

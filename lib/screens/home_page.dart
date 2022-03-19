@@ -90,7 +90,10 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                const FirstPartBar(),
+                const FirstPartBar(
+                  color: Colors.green,
+                  color1: Colors.green,
+                ),
                 Row(
                   children: [
                     Expanded(
@@ -463,4 +466,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
