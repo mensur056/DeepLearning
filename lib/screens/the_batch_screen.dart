@@ -90,9 +90,9 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
             Column(
               children: const [
                 FirstPartBar(
-                  color: Colors.redAccent,
-                  color1: Colors.redAccent,
-                  image: 'images/logoooo1.png',title: 'Gain the knowledge and ',title1: 'skills for an AI career',
+                  color: Colors.lightBlueAccent,
+                  color1: Colors.lightBlueAccent,
+                  image: 'images/logoooo2.png',title: 'The Batch: Weekly AI news for engineers, ',title1: 'executives, and enthusiasts.',
                 )
               ],
             )
