@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/home_page.dart';
 import 'package:deep_learning/widgets/app_bar_titles.dart';
 import 'package:deep_learning/widgets/first_part_bar.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const HomePage()));
                   },
                 ),
                 const SizedBox(
@@ -88,7 +90,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
               children: const [
                 FirstPartBar(
                   color: Colors.red,
-                  color1: Colors.red,image: 'images/logoooo1.png',
+                  color1: Colors.red,
+                  image: 'images/logoooo1.png',title: 'Gain the knowledge and ',title1: 'skills for an AI career',
                 )
               ],
             )

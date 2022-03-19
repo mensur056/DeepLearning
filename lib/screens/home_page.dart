@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 const FirstPartBar(
                   color: Colors.green,
-                  color1: Colors.green,image: 'images/logoooo.png',
+                  color1: Colors.green,image: 'images/logoooo.png',title: 'Build your AI career',title1:'with DeepLearning.AI'
                 ),
                 Row(
                   children: [

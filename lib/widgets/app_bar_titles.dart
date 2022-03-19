@@ -10,6 +10,7 @@ class AppBarTitles extends StatelessWidget {
   final String title;
   final String font;
 
+
   @override
   Widget build(BuildContext context) {
     return TextButton(

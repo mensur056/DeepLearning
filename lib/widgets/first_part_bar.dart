@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key, required this.color, required this.color1, required this.image,
+    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1,
   }) : super(key: key);
 final Color color;
 final Color color1;
 final String image;
+final String title;
+final String title1;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,21 +30,21 @@ final String image;
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    SizedBox(
+                  children:  [
+                    const SizedBox(
                       height: 150,
                     ),
                     Text(
-                      'Build your AI career',
-                      style: TextStyle(
+                      title,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 60,
                           fontFamily: 'Poppins'),
                     ),
-                    Text(
-                      'with DeepLearning.AI',
-                      style: TextStyle(
+                     Text(
+                     title1,
+                      style: const TextStyle(
                           color: Colors.white, fontSize: 30),
                     )
                   ],
