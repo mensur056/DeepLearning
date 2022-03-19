@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 const FirstPartBar(
                   color: Colors.green,
-                  color1: Colors.green,
+                  color1: Colors.green,image: 'images/logoooo.png',
                 ),
                 Row(
                   children: [

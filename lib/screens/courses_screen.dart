@@ -88,7 +88,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               children: const [
                 FirstPartBar(
                   color: Colors.red,
-                  color1: Colors.red,
+                  color1: Colors.red,image: 'images/logoooo1.png',
                 )
               ],
             )

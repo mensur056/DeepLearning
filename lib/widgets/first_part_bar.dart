@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key, required this.color, required this.color1,
+    Key? key, required this.color, required this.color1, required this.image,
   }) : super(key: key);
 final Color color;
 final Color color1;
+final String image;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -49,7 +50,7 @@ final Color color1;
                 Expanded(
                   flex: 5,
                   child: Image.asset(
-                    'images/logoooo.png',
+                    image,
                   ),
                 )
               ],
