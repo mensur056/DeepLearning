@@ -39,7 +39,7 @@ final String title1;
                       style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 60,
+                          fontSize: 50,
                           fontFamily: 'Poppins'),
                     ),
                      Text(

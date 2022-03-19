@@ -89,8 +89,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
             Column(
               children: const [
                 FirstPartBar(
-                  color: Colors.red,
-                  color1: Colors.red,
+                  color: Colors.redAccent,
+                  color1: Colors.redAccent,
                   image: 'images/logoooo1.png',title: 'Gain the knowledge and ',title1: 'skills for an AI career',
                 )
               ],
