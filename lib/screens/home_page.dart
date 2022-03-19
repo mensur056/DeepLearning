@@ -228,7 +228,11 @@ class _HomePageState extends State<HomePage> {
                               const SizedBox(
                                 height: 50,
                               ),
-                              Container(
+                              HoverContainer(
+                                hoverDecoration: const BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(8))),
                                 child: const Center(
                                   child: Text(
                                     'See All Programs',
@@ -513,5 +517,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
