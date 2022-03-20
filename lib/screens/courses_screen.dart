@@ -126,8 +126,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
         child: ListView(
           children: [
             Column(
-              children: const [
-                FirstPartBar(
+              children: [
+                const FirstPartBar(
                   fontSize: 50,
                   color: Colors.redAccent,
                   color1: Colors.redAccent,
@@ -135,7 +135,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   title: 'Gain the knowledge and ',
                   title1: 'skills for an AI career',
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 30.0, bottom: 20),
                   child: Text(
                     'Our Courses',
@@ -145,21 +145,113 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         fontFamily: 'Poppins'),
                   ),
                 ),
-                ThirdPartBar(
-                    title1: 'ALL Of Everyone',
-                    title2: 'DeepLearning Specialization'),
-                ThirdPartBar(
-                    title1: 'ALL Of Everyone',
-                    title2: 'DeepLearning Specialization'),
-                ThirdPartBar(
-                    title1: 'ALL Of Everyone',
-                    title2: 'DeepLearning Specialization'),
-                ThirdPartBar(
-                    title1: 'ALL Of Everyone',
-                    title2: 'DeepLearning Specialization'),
-                ThirdPartBar(
-                    title1: 'ALL Of Everyone',
-                    title2: 'DeepLearning Specialization'),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                    const ThirdPartBar(
+                        title1: 'ALL Of Everyone',
+                        title2: 'DeepLearning Specialization'),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                    const ThirdPartBar(
+                        title1: 'ALL Of Everyone',
+                        title2: 'DeepLearning Specialization'),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                    const ThirdPartBar(
+                        title1: 'ALL Of Everyone',
+                        title2: 'DeepLearning Specialization'),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                    const ThirdPartBar(
+                        title1: 'ALL Of Everyone',
+                        title2: 'DeepLearning Specialization'),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                    const ThirdPartBar(
+                        title1: 'ALL Of Everyone',
+                        title2: 'DeepLearning Specialization'),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                      ),
+                      flex: 2,
+                    ),
+                  ],
+                ),
               ],
             )
           ],
