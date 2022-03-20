@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:deep_learning/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DeepLearning',
-      home: HomePage(),
+      home: CoursesScreen(),
     );
   }
 }

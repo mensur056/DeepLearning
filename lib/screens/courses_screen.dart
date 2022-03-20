@@ -3,6 +3,7 @@ import 'package:deep_learning/screens/home_page.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:deep_learning/widgets/app_bar_titles.dart';
 import 'package:deep_learning/widgets/first_part_bar.dart';
+import 'package:deep_learning/widgets/third_part_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
@@ -42,9 +43,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 AppBarTitles(
                   title: 'Courses',
                   font: 'Fredokat',
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                 ),
                 const SizedBox(
                   width: 35,
@@ -103,11 +102,17 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 HoverContainer(
                   decoration: const BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                    color: Colors.red,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(5),
+                    ),
+                  ),
                   hoverDecoration: const BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(5),
+                    ),
+                  ),
                   height: 40,
                   width: 140,
                   child: const Center(child: Text('Get Al News')),
@@ -129,7 +134,32 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   image: 'images/logoooo1.png',
                   title: 'Gain the knowledge and ',
                   title1: 'skills for an AI career',
-                )
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 30.0, bottom: 20),
+                  child: Text(
+                    'Our Courses',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 40,
+                        fontFamily: 'Poppins'),
+                  ),
+                ),
+                ThirdPartBar(
+                    title1: 'ALL Of Everyone',
+                    title2: 'DeepLearning Specialization'),
+                ThirdPartBar(
+                    title1: 'ALL Of Everyone',
+                    title2: 'DeepLearning Specialization'),
+                ThirdPartBar(
+                    title1: 'ALL Of Everyone',
+                    title2: 'DeepLearning Specialization'),
+                ThirdPartBar(
+                    title1: 'ALL Of Everyone',
+                    title2: 'DeepLearning Specialization'),
+                ThirdPartBar(
+                    title1: 'ALL Of Everyone',
+                    title2: 'DeepLearning Specialization'),
               ],
             )
           ],
