@@ -136,7 +136,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   title1: 'skills for an AI career',
                 ),
                 Container(
-                  color: Color(0xFFe3f6f7),
+                  color: const Color(0xFFe3f6f7),
                   child: Column(
                     children: [
                       const Padding(
