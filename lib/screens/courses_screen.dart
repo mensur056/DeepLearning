@@ -264,7 +264,58 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 Container(
                   color: Colors.white,
-                  height: 500,
+                  height: 800,
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      const Text(
+                        'Find your learning pathway',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 40,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      const Text(
+                        'Whether you’re a beginner looking to gain foundational knowledge or an experienced\n practitioner hoping to stay current with advanced skills, our world-class curriculum and\n unique teaching methodology will guide you through every stage of your AI journey.',
+                        style: TextStyle(color: Colors.black, fontSize: 20),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            color: Colors.grey,
+                            height: 400,
+                            width: 300,
+                          ),
+                          const SizedBox(
+                            width: 50,
+                          ),
+                          Container(
+                            color: Colors.grey,
+                            height: 400,
+                            width: 300,
+                          ),
+                          const SizedBox(
+                            width: 50,
+                          ),
+                          Container(
+                            color: Colors.grey,
+                            height: 400,
+                            width: 300,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
             )
