@@ -20,7 +20,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
+        toolbarHeight: 110,
         actions: [
           Expanded(
             child: Row(
@@ -31,7 +31,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const HomePage()));
@@ -50,7 +50,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -63,7 +63,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const BlogScreen()));

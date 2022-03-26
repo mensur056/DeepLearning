@@ -20,7 +20,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
+        toolbarHeight: 110,
         actions: [
           Expanded(
             child: Row(
@@ -31,7 +31,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const HomePage()));
@@ -44,7 +44,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                   title: 'Courses',
                   font: 'Fredokat',
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const CoursesScreen()));
@@ -63,7 +63,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const BlogScreen()));
@@ -76,7 +76,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -89,7 +89,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));

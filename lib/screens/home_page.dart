@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
+        toolbarHeight: 110,
         actions: [
           Expanded(
             child: Row(
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                   title: 'Courses',
                   font: 'Fredokat',
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const CoursesScreen()));
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const BlogScreen()));
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: [
                 const FirstPartBar(
-                    fontSize: 50,
+                    fontSize: 60,
                     color: Colors.lightGreen,
                     color1: Colors.lightGreen,
                     image: 'images/logoooo.png',

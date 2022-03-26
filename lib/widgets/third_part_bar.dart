@@ -23,7 +23,7 @@ class ThirdPartBar extends StatelessWidget {
                 decoration: const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.blueAccent,
+                      color: Colors.grey,
                       blurRadius: 9,
                       offset: Offset(4, 8), // Shadow position
                     ),
@@ -78,7 +78,7 @@ class ThirdPartBar extends StatelessWidget {
                 decoration: const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.blueAccent,
+                      color: Colors.grey,
                       blurRadius: 9,
                       offset: Offset(4, 8), // Shadow position
                     ),

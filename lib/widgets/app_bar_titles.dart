@@ -22,7 +22,7 @@ class AppBarTitles extends StatelessWidget {
             return Colors.red;
           }
 
-          return Colors.black;
+          return Colors.black87;
         }),
       ),
       onPressed:onPressed,

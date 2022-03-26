@@ -19,7 +19,7 @@ class _BlogScreenState extends State<BlogScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
+        toolbarHeight: 110,
         actions: [
           Expanded(
             child: Row(
@@ -30,7 +30,7 @@ class _BlogScreenState extends State<BlogScreen> {
                     'images/deepLearningLogo.png',
                   ),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const HomePage()));
@@ -43,7 +43,7 @@ class _BlogScreenState extends State<BlogScreen> {
                   title: 'Courses',
                   font: 'Fredokat',
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const CoursesScreen()));
@@ -53,10 +53,12 @@ class _BlogScreenState extends State<BlogScreen> {
                   width: 35,
                 ),
                 AppBarTitles(
-                  onPressed: () { Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TheBatchScreen()));
+                  },
                   title: 'The Batch',
                   font: 'Fredokat',
                 ),
@@ -64,9 +66,7 @@ class _BlogScreenState extends State<BlogScreen> {
                   width: 35,
                 ),
                 AppBarTitles(
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                   title: 'Blog',
                   font: 'Fredokat',
                 ),
@@ -75,7 +75,7 @@ class _BlogScreenState extends State<BlogScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
@@ -88,7 +88,7 @@ class _BlogScreenState extends State<BlogScreen> {
                 ),
                 AppBarTitles(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TheBatchScreen()));
