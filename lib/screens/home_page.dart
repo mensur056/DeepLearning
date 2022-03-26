@@ -124,6 +124,8 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: [
                 const FirstPartBar(
+                    color2: Colors.white,
+                    color3: Colors.white,
                     fontSize: 60,
                     color: Colors.lightGreen,
                     color1: Colors.lightGreen,

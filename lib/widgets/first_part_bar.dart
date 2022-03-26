@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1, required this.fontSize,
+    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1, required this.fontSize, required this.color2, required this.color3,
   }) : super(key: key);
 final Color color;
 final Color color1;
@@ -11,6 +11,8 @@ final String image;
 final String title;
 final String title1;
 final double fontSize;
+final Color color2;
+final Color color3;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,7 +26,7 @@ final double fontSize;
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Container(
                     color: color1,
                   ),
@@ -38,15 +40,15 @@ final double fontSize;
                     Text(
                       title,
                       style:  TextStyle(
-                          color: Colors.white,
+                          color:color2,
                           fontWeight: FontWeight.bold,
                           fontSize: fontSize,
                           fontFamily: 'Poppins'),
                     ),
                      Text(
                      title1,
-                      style: const TextStyle(
-                          color: Colors.white, fontSize: 30),
+                      style:  TextStyle(
+                          color: color3, fontSize: 45),
                     )
                   ],
                 ),

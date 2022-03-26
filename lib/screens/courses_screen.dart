@@ -128,9 +128,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
             Column(
               children: [
                 const FirstPartBar(
-                  fontSize: 50,
-                  color: Colors.redAccent,
-                  color1: Colors.redAccent,
+                  color2: Colors.black,
+                  color3: Colors.black,
+                  fontSize: 60,
+                  color: Color(0xFFf96e7b),
+                  color1: Color(0xFFf96e7b),
                   image: 'images/logoooo1.png',
                   title: 'Gain the knowledge and ',
                   title1: 'skills for an AI career',

@@ -121,6 +121,8 @@ class _BlogScreenState extends State<BlogScreen> {
             Column(
               children: const [
                 FirstPartBar(
+                  color2: Colors.white,
+                  color3: Colors.white,
                   fontSize: 50,
                   color: Colors.orange,
                   color1: Colors.orange,

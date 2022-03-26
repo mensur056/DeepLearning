@@ -122,6 +122,8 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
             Column(
               children: const [
                 FirstPartBar(
+                  color2: Colors.white,
+                  color3: Colors.white,
                   fontSize: 50,
                   color: Colors.lightBlueAccent,
                   color1: Colors.lightBlueAccent,
