@@ -292,27 +292,33 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            color: Colors.grey,
-                            height: 400,
-                            width: 300,
+                        children: const [
+                          EndBarContainer(
+                            headline: 'Introductory',
+                            informationTop:
+                                'Introductory programs can be understood by a high school graduate as they require little to no knowledge of AI concepts.',
+                            informationBot:
+                                'Prerequisites:Basic math (linear algebra, statistics) Some coding experience (Python, R, or similar)',
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 50,
                           ),
-                          Container(
-                            color: Colors.grey,
-                            height: 400,
-                            width: 300,
+                          EndBarContainer(
+                            headline: 'Intermediate',
+                            informationTop:
+                                'Intermediate programs build on Introductory ones and provide an additional experience of concepts and tools across the subfields of AI.',
+                            informationBot:
+                                'Prerequisites:Basic math (linear algebra, statistics) Some coding experience (Python, R, or similar)',
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 50,
                           ),
-                          Container(
-                            color: Colors.grey,
-                            height: 400,
-                            width: 300,
+                          EndBarContainer(
+                            headline: 'Advanced',
+                            informationTop:
+                                'Advanced programs are the first stage of career specialization in a particular area of machine learning.',
+                            informationBot:
+                                'Prerequisites:Strong familiarity with Introductory and Intermediate program material, especially the Machine Learning and Deep Learning Specializations',
                           )
                         ],
                       )
@@ -323,6 +329,45 @@ class _CoursesScreenState extends State<CoursesScreen> {
             )
           ],
         ),
+      ),
+    );
+  }
+}
+
+class EndBarContainer extends StatelessWidget {
+  const EndBarContainer({
+    Key? key,
+    required this.headline,
+    required this.informationTop,
+    required this.informationBot,
+  }) : super(key: key);
+  final String headline;
+  final String informationTop;
+  final String informationBot;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 5,
+            offset: Offset(1, 5),
+          )
+        ],
+      ),
+      height: 450,
+      width: 350,
+      child: Column(
+        children: [
+          Container(
+            color: Colors.red,
+          ),
+          Text(headline),
+          Text(informationTop)
+        ],
       ),
     );
   }
