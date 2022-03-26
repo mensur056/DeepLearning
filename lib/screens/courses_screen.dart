@@ -252,7 +252,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               title2: 'DeepLearning Specialization'),
                           Expanded(
                             child: Container(
-                              color: Colors.white,
+                              color: Colors.red,
                             ),
                             flex: 2,
                           ),
