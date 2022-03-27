@@ -294,8 +294,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           EndBarContainer(
-                            color1: Colors.grey,
-                            color2: Colors.grey,
+                            color1: Color(0xFFdee6ea),
+                            color2: Color(0xFFdee6ea),
                             headline: 'Introductory',
                             informationTop:
                                 'Introductory programs can be understood by a high school graduate as they require little to no knowledge of AI concepts.',
@@ -305,7 +305,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           SizedBox(
                             width: 50,
                           ),
-                          EndBarContainer(color1: Colors.green,color2: Colors.grey,
+                          EndBarContainer(color1: Colors.green,color2: Color(0xFFdee6ea),
                             headline: 'Intermediate',
                             informationTop:
                                 'Intermediate programs build on Introductory ones and provide an additional experience of concepts and tools across the subfields of AI.',
