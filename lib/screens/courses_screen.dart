@@ -312,7 +312,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             informationTop:
                                 'Intermediate programs build on Introductory ones\n   and provide additional experience of concepts\n            and tools across the subfields of AI.',
                             informationBot:
-                                'Prerequisites:Basic math (linear algebra, statistics) Some coding experience (Python, R, or similar)',
+                                '                             Prerequisites:\n           Basic math (linear algebra, statistics) \n    Some coding experience (Python, R, or similar)',
                           ),
                           SizedBox(
                             width: 50,
