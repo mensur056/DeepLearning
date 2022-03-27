@@ -362,8 +362,29 @@ class EndBarContainer extends StatelessWidget {
       width: 350,
       child: Column(
         children: [
-          Container(
-            color: Colors.red,
+          Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 50,
+                height: 60,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Container(
+                color: Colors.red,
+                width: 50,
+                height: 90,
+              ), const SizedBox(
+                width: 10,
+              ),
+              Container(
+                color: Colors.red,
+                width: 50,
+                height: 120,
+              ),
+            ],
           ),
           Text(headline),
           Text(informationTop)
