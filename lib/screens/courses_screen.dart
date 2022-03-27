@@ -305,7 +305,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           SizedBox(
                             width: 50,
                           ),
-                          EndBarContainer(color1: Colors.green,color2: Color(0xFFdee6ea),
+                          EndBarContainer(
+                            color1: Colors.green,
+                            color2: Color(0xFFdee6ea),
                             headline: 'Intermediate',
                             informationTop:
                                 'Intermediate programs build on Introductory ones and provide an additional experience of concepts and tools across the subfields of AI.',
@@ -315,7 +317,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           SizedBox(
                             width: 50,
                           ),
-                          EndBarContainer(color1: Colors.green,color2: Colors.green,
+                          EndBarContainer(
+                            color1: Colors.green,
+                            color2: Colors.green,
                             headline: 'Advanced',
                             informationTop:
                                 'Advanced programs are the first stage of career specialization in a particular area of machine learning.',
@@ -401,7 +405,14 @@ class EndBarContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(headline),
+          Text(
+            headline,
+            style: const TextStyle(
+                color: Colors.black,
+                fontSize: 28,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.bold),
+          ),
           Text(informationTop)
         ],
       ),
