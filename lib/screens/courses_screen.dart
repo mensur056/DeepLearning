@@ -322,7 +322,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             color2: Colors.green,
                             headline: 'Advanced',
                             informationTop:
-                                'Advanced programs are the first stage of career specialization in a particular area of machine learning.',
+                                'Advanced programs are the first stage of career\n    specialization in a particular area of machine\n                                  learning.',
                             informationBot:
                                 'Prerequisites:Strong familiarity with Introductory and Intermediate program material, especially the Machine Learning and Deep Learning Specializations',
                           )
