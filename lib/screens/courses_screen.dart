@@ -324,7 +324,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             informationTop:
                                 'Advanced programs are the first stage of career\n    specialization in a particular area of machine\n                                  learning.',
                             informationBot:
-                                'Prerequisites:Strong familiarity with Introductory and Intermediate program material, especially the Machine Learning and Deep Learning Specializations',
+                                '                              Prerequisites:\n      Strong familiarity with Introductory and\n Intermediate program material, especially the\n       Machine Learning and Deep Learning\n                              Specializations',
                           )
                         ],
                       )
