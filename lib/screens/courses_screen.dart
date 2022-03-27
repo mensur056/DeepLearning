@@ -300,9 +300,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             color2: Color(0xFFdee6ea),
                             headline: 'Introductory',
                             informationTop:
-                                'Introductory programs can be understood by a \n    high school graduate as they require little to \n                   no knowledge of AI concepts.',
+                                'Introductory programs can be understood by a \n    high school graduate as they require little to \n                   no knowledge of AI concepts.\n ',
                             informationBot:
-                                '                             Prerequisites:\n         Basic math (linear algebra, statistics)\n Some coding experience (Python, R, or similar)',
+                                '                             Prerequisites:\n         Basic math (linear algebra, statistics)\n Some coding experience (Python, R, or similar)\n ',
                           ),
                           SizedBox(
                             width: 50,
@@ -312,9 +312,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             color2: Color(0xFFdee6ea),
                             headline: 'Intermediate',
                             informationTop:
-                                'Intermediate programs build on Introductory ones\n   and provide additional experience of concepts\n            and tools across the subfields of AI.',
+                                'Intermediate programs build on Introductory ones\n   and provide additional experience of concepts\n            and tools across the subfields of AI.\n ',
                             informationBot:
-                                '                             Prerequisites:\n           Basic math (linear algebra, statistics) \n    Some coding experience (Python, R, or similar)',
+                                '                             Prerequisites:\n           Basic math (linear algebra, statistics) \n    Some coding experience (Python, R, or similar)\n  ',
                           ),
                           SizedBox(
                             width: 50,
