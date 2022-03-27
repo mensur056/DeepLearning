@@ -359,18 +359,20 @@ class EndBarContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(5)),
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey,
-            blurRadius: 5,
-            offset: Offset(1, 5),
+            color: Color(0xFFd2dce0),
+            blurRadius: 7,
+            offset: Offset(1, 6),
           )
         ],
       ),
       height: 450,
       width: 350,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -405,6 +407,9 @@ class EndBarContainer extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(
+            height: 20,
+          ),
           Text(
             headline,
             style: const TextStyle(
@@ -413,7 +418,14 @@ class EndBarContainer extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold),
           ),
-          Text(informationTop)
+          const SizedBox(
+            height: 20,
+          ),
+          Text(informationTop),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(informationBot),
         ],
       ),
     );
