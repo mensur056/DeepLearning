@@ -298,9 +298,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             color2: Color(0xFFdee6ea),
                             headline: 'Introductory',
                             informationTop:
-                                'Introductory programs can be understood by a high school graduate as they require little to no knowledge of AI concepts.',
+                                'Introductory programs can be understood by a \n    high school graduate as they require little to \n                   no knowledge of AI concepts.',
                             informationBot:
-                                'Prerequisites:Basic math (linear algebra, statistics) Some coding experience (Python, R, or similar)',
+                                '                             Prerequisites:\n         Basic math (linear algebra, statistics)\n Some coding experience (Python, R, or similar)',
                           ),
                           SizedBox(
                             width: 50,
@@ -310,7 +310,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             color2: Color(0xFFdee6ea),
                             headline: 'Intermediate',
                             informationTop:
-                                'Intermediate programs build on Introductory ones and provide an additional experience of concepts and tools across the subfields of AI.',
+                                'Intermediate programs build on Introductory ones\n   and provide additional experience of concepts\n            and tools across the subfields of AI.',
                             informationBot:
                                 'Prerequisites:Basic math (linear algebra, statistics) Some coding experience (Python, R, or similar)',
                           ),
@@ -371,62 +371,77 @@ class EndBarContainer extends StatelessWidget {
       ),
       height: 450,
       width: 350,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Container(
-                width: 50,
-                height: 60,
-                decoration: const BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: color1,
-                    borderRadius: const BorderRadius.all(Radius.circular(5))),
-                width: 50,
-                height: 90,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: color2,
-                    borderRadius: const BorderRadius.all(Radius.circular(5))),
-                width: 50,
-                height: 120,
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            headline,
-            style: const TextStyle(
-                color: Colors.black,
-                fontSize: 28,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(informationTop),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(informationBot),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(right: 15.0, left: 15),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Container(
+                  width: 50,
+                  height: 60,
+                  decoration: const BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: color1,
+                      borderRadius: const BorderRadius.all(Radius.circular(5))),
+                  width: 50,
+                  height: 90,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: color2,
+                      borderRadius: const BorderRadius.all(Radius.circular(5))),
+                  width: 50,
+                  height: 120,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+              headline,
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 28,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+              informationTop,
+              style: const TextStyle(
+                  fontFamily: 'Quicksand',
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              informationBot,
+              style: const TextStyle(
+                  fontFamily: 'Quicksand',
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
