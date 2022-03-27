@@ -294,6 +294,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           EndBarContainer(
+                            color1: Colors.grey,
+                            color2: Colors.grey,
                             headline: 'Introductory',
                             informationTop:
                                 'Introductory programs can be understood by a high school graduate as they require little to no knowledge of AI concepts.',
@@ -303,7 +305,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           SizedBox(
                             width: 50,
                           ),
-                          EndBarContainer(
+                          EndBarContainer(color1: Colors.green,color2: Colors.grey,
                             headline: 'Intermediate',
                             informationTop:
                                 'Intermediate programs build on Introductory ones and provide an additional experience of concepts and tools across the subfields of AI.',
@@ -313,7 +315,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           SizedBox(
                             width: 50,
                           ),
-                          EndBarContainer(
+                          EndBarContainer(color1: Colors.green,color2: Colors.green,
                             headline: 'Advanced',
                             informationTop:
                                 'Advanced programs are the first stage of career specialization in a particular area of machine learning.',
@@ -340,10 +342,14 @@ class EndBarContainer extends StatelessWidget {
     required this.headline,
     required this.informationTop,
     required this.informationBot,
+    required this.color1,
+    required this.color2,
   }) : super(key: key);
   final String headline;
   final String informationTop;
   final String informationBot;
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
@@ -362,25 +368,34 @@ class EndBarContainer extends StatelessWidget {
       width: 350,
       child: Column(
         children: [
-          Row(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.end,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                color: Colors.red,
                 width: 50,
                 height: 60,
+                decoration: const BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
               ),
               const SizedBox(
                 width: 10,
               ),
               Container(
-                color: Colors.red,
+                decoration: BoxDecoration(
+                    color: color1,
+                    borderRadius: const BorderRadius.all(Radius.circular(5))),
                 width: 50,
                 height: 90,
-              ), const SizedBox(
+              ),
+              const SizedBox(
                 width: 10,
               ),
               Container(
-                color: Colors.red,
+                decoration: BoxDecoration(
+                    color: color2,
+                    borderRadius: const BorderRadius.all(Radius.circular(5))),
                 width: 50,
                 height: 120,
               ),
