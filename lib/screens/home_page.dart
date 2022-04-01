@@ -22,6 +22,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String imageName = 'images/logoooo.png';
+  String titleName_1 = 'Build your AI career';
+  String titleName_2 = 'with DeepLearning.AI';
+  String imageIconName_1 = 'mezun.png';
+String titleBarInfo_1='Gain world-class education to';
+  String titleBarInfo_2='expand your technical knowledge';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,15 +129,15 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                const FirstPartBar(
+                FirstPartBar(
                     color2: Colors.white,
                     color3: Colors.white,
                     fontSize: 60,
                     color: Colors.lightGreen,
                     color1: Colors.lightGreen,
-                    image: 'images/logoooo.png',
-                    title: 'Build your AI career',
-                    title1: 'with DeepLearning.AI'),
+                    image: imageName,
+                    title: titleName_1,
+                    title1: titleName_2),
                 Row(
                   children: [
                     Expanded(
@@ -143,29 +149,29 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                       height: secondBarHeight,
                       child: Row(
-                        children: const [
+                        children: [
                           SecondPartBar(
-                            iconName: 'mezun.png',
-                            barInfo1: 'Gain world-class education to',
-                            barInfo2: 'expand your technical knowledge',
+                            iconName: imageIconName_1,
+                            barInfo1: titleBarInfo_1,
+                            barInfo2: titleBarInfo_2,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
-                          SecondPartBar(
+                          const SecondPartBar(
                             iconName: 'settings.png',
                             barInfo1: 'Get hands-on training to acquire',
                             barInfo2: 'practical skills',
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
-                          SecondPartBar(
+                          const SecondPartBar(
                             iconName: 'people.png',
                             barInfo1: 'Learn from a collaborative ',
                             barInfo2: 'community of peers',
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                         ],

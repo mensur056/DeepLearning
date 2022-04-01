@@ -354,6 +354,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     children: [
                       Column(
                         children: const [
+                          SizedBox(
+                            height: 50,
+                          ),
                           Text(
                             'Sing Up',
                             style: TextStyle(
@@ -373,12 +376,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                 color: Colors.black,
                                 fontSize: 25),
                           ),
+                          SizedBox(
+                            height: 40,
+                          ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Column(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: const [
@@ -387,17 +392,20 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               ),
                               Text(
                                 'First name',
-                                style: TextStyle(color: Colors.black, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
                               ),
                               SizedBox(
                                 width: 150,
                               ),
                               Text(
                                 'Last name',
-                                style: TextStyle(color: Colors.black, fontSize: 18),
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
                               ),
                             ],
-                          ),const SizedBox(
+                          ),
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -434,7 +442,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             padding: EdgeInsets.only(left: 25.0, bottom: 5),
                             child: Text(
                               'Email',
-                              style: TextStyle(color: Colors.black, fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
                             ),
                           ),
                           Row(
@@ -461,7 +470,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             padding: EdgeInsets.only(left: 25.0, bottom: 5),
                             child: Text(
                               'Job Title',
-                              style: TextStyle(color: Colors.black, fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
                             ),
                           ),
                           Row(
@@ -488,7 +498,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             padding: EdgeInsets.only(left: 25.0, bottom: 5),
                             child: Text(
                               'Country',
-                              style: TextStyle(color: Colors.black, fontSize: 18),
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
                             ),
                           ),
                           Row(
@@ -498,7 +509,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               ),
                               DropdownButton<String>(
                                 value: dropdownValue,
-                                icon: const Icon(Icons.keyboard_arrow_down_sharp),
+                                icon:
+                                    const Icon(Icons.keyboard_arrow_down_sharp),
                                 elevation: 16,
                                 style: const TextStyle(color: Colors.black),
                                 underline: Container(
@@ -507,7 +519,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                 ),
                                 onChanged: (String? newValue) {
                                   setState(
-                                        () {
+                                    () {
                                       dropdownValue = newValue!;
                                     },
                                   );
@@ -518,7 +530,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                   'America',
                                   'Africa'
                                 ].map<DropdownMenuItem<String>>(
-                                      (String value) {
+                                  (String value) {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(value),
@@ -556,10 +568,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             ], //<Widget>[]
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 160.0, top: 15),
+                            padding:
+                                const EdgeInsets.only(left: 160.0, top: 15),
                             child: Container(
                               decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
                                 color: Colors.red,
                               ),
                               height: 60,
@@ -567,15 +581,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               child: const Center(
                                 child: Text(
                                   'Submit',
-                                  style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
                                 ),
                               ),
                             ),
                           )
                         ],
                       ),
-
                     ],
                   ),
                 ),
