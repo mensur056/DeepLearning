@@ -14,6 +14,10 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
+  String imageName = 'images/logoooo2.png';
+  String titleName = 'The Batch: Weekly AI news ';
+  String titleName1 = 'for engineers,executives.';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,16 +123,16 @@ class _BlogScreenState extends State<BlogScreen> {
         child: ListView(
           children: [
             Column(
-              children: const [
+              children: [
                 FirstPartBar(
                   color2: Colors.white,
                   color3: Colors.white,
                   fontSize: 50,
                   color: Colors.orange,
                   color1: Colors.orange,
-                  image: 'images/logoooo2.png',
-                  title: 'The Batch: Weekly AI news ',
-                  title1: 'for engineers,executives.',
+                  image: imageName,
+                  title: titleName,
+                  title1: titleName1,
                 )
               ],
             )
