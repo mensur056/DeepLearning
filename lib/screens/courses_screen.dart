@@ -17,7 +17,10 @@ class CoursesScreen extends StatefulWidget {
 }
 
 class _CoursesScreenState extends State<CoursesScreen> {
-  String imageName_1='images/logoooo1.png';
+  String imageName_1 = 'images/logoooo1.png';
+  String titleName_1 = 'Gain the knowledge and ';
+  String titleName_2 = 'skills for an AI career';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,15 +133,15 @@ class _CoursesScreenState extends State<CoursesScreen> {
           children: [
             Column(
               children: [
-                 FirstPartBar(
+                FirstPartBar(
                   color2: Colors.black,
                   color3: Colors.black,
                   fontSize: 60,
-                  color: Color(0xFFf96e7b),
+                  color: const Color(0xFFf96e7b),
                   color1: const Color(0xFFf96e7b),
                   image: imageName_1,
-                  title: 'Gain the knowledge and ',
-                  title1: 'skills for an AI career',
+                  title: titleName_1,
+                  title1: titleName_2,
                 ),
                 Container(
                   color: const Color(0xFFe3f6f7),
