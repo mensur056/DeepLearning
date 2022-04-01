@@ -291,7 +291,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       ),
                       const Text(
                         'Whether you’re a beginner looking to gain foundational knowledge or an experienced\n practitioner hoping to stay current with advanced skills, our world-class curriculum and\n unique teaching methodology will guide you through every stage of your AI journey.',
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                        style: TextStyle(color: Colors.black, fontSize: 20,fontFamily: 'Quicksand',fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 50,
