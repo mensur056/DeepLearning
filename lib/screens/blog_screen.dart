@@ -127,7 +127,7 @@ class _BlogScreenState extends State<BlogScreen> {
                   color: Colors.orange,
                   color1: Colors.orange,
                   image: 'images/logoooo2.png',
-                  title: ': Weekly AI news ',
+                  title: 'The Batch: Weekly AI news ',
                   title1: 'for engineers,executives.',
                 )
               ],
