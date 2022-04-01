@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
 import '../widgets/end_bar_container.dart';
+import '../widgets/mail_and_register_part.dart';
 
 class CoursesScreen extends StatefulWidget {
   const CoursesScreen({Key? key}) : super(key: key);
@@ -20,6 +21,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
   String imageName_1 = 'images/logoooo1.png';
   String titleName_1 = 'Gain the knowledge and ';
   String titleName_2 = 'skills for an AI career';
+  String dropdownValue =
+      'Please Selected Country                                                                          ';
+  bool value = false;
 
   @override
   Widget build(BuildContext context) {
@@ -291,7 +295,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       ),
                       const Text(
                         'Whether you’re a beginner looking to gain foundational knowledge or an experienced\n practitioner hoping to stay current with advanced skills, our world-class curriculum and\n unique teaching methodology will guide you through every stage of your AI journey.',
-                        style: TextStyle(color: Colors.black, fontSize: 20,fontFamily: 'Quicksand',fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 50,
@@ -336,7 +344,228 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       )
                     ],
                   ),
-                )
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+
+                      borderRadius: BorderRadius.all(Radius.circular(6))),
+                  height: 600,
+                  width: 500,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25.0, top: 15),
+                        child: Text(
+                          'Sing Up',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Poppins',
+                              color: Colors.black,
+                              fontSize: 20),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: const [
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Text(
+                            'First name',
+                            style: TextStyle(color: Colors.black, fontSize: 18),
+                          ),
+                          SizedBox(
+                            width: 150,
+                          ),
+                          Text(
+                            'Last name',
+                            style: TextStyle(color: Colors.black, fontSize: 18),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Row(
+                        children: const [
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'ex. John',
+                                  border: OutlineInputBorder()),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'ex. Smith',
+                                  border: OutlineInputBorder()),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                        child: Text(
+                          'Email',
+                          style: TextStyle(color: Colors.black, fontSize: 18),
+                        ),
+                      ),
+                      Row(
+                        children: const [
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'ex. johnsmith@gmail.com',
+                                  border: OutlineInputBorder()),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                        child: Text(
+                          'Job Title',
+                          style: TextStyle(color: Colors.black, fontSize: 18),
+                        ),
+                      ),
+                      Row(
+                        children: const [
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: 'ex. Software Engineer',
+                                  border: OutlineInputBorder()),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25.0, bottom: 5),
+                        child: Text(
+                          'Country',
+                          style: TextStyle(color: Colors.black, fontSize: 18),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          const SizedBox(
+                            width: 25,
+                          ),
+                          DropdownButton<String>(
+                            value: dropdownValue,
+                            icon: const Icon(Icons.keyboard_arrow_down_sharp),
+                            elevation: 16,
+                            style: const TextStyle(color: Colors.black),
+                            underline: Container(
+                              height: 2,
+                              color: Colors.deepPurpleAccent,
+                            ),
+                            onChanged: (String? newValue) {
+                              setState(
+                                () {
+                                  dropdownValue = newValue!;
+                                },
+                              );
+                            },
+                            items: <String>[
+                              'Please Selected Country                                                                          ',
+                              'Azerbaijan',
+                              'America',
+                              'Africa'
+                            ].map<DropdownMenuItem<String>>(
+                              (String value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(value),
+                                );
+                              },
+                            ).toList(),
+                          ),
+                          const SizedBox(
+                            width: 30,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          const SizedBox(
+                            width: 25,
+                          ),
+                          Checkbox(
+                            value: this.value,
+                            onChanged: (value) {
+                              setState(() {
+                                this.value = value!;
+                              });
+                            },
+                          ), //Checkbox
+                          const Text(
+                            'I want to get the latest news, courses, and events',
+                            style: TextStyle(fontSize: 17.0),
+                          ), //Text
+                          const SizedBox(width: 10), //SizedBox
+                          /** Checkbox Widget **/
+                        ], //<Widget>[]
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 160.0, top: 15),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Colors.red,
+                          ),
+                          height: 60,
+                          width: 180,
+                          child: const Center(
+                            child: Text(
+                              'Submit',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
             )
           ],
