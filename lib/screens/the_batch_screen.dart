@@ -28,7 +28,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
               children: [
                 GestureDetector(
                   child: Image.asset(
-                    'images/deepLearningLogo.png',
+                    'images/the_batch.png',
                   ),
                   onTap: () {
                     Navigator.pushReplacement(

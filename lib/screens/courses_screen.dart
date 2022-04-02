@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 
 import '../widgets/end_bar_container.dart';
+import '../widgets/fifth_part_bar.dart';
 import '../widgets/mail_and_register_part.dart';
 
 class CoursesScreen extends StatefulWidget {
@@ -592,6 +593,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     ],
                   ),
                 ),
+                const FifthPartBar()
               ],
             )
           ],
