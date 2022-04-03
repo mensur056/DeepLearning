@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                FirstPartBar(
+                FirstPartBar(barHeight: 510,
                     fontSize2: 30,
                     color2: Colors.white,
                     color3: Colors.white,

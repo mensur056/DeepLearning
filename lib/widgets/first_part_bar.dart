@@ -13,7 +13,7 @@ class FirstPartBar extends StatelessWidget {
     required this.fontSize,
     required this.color2,
     required this.color3,
-    required this.fontSize2,
+    required this.fontSize2, required this.barHeight,
   }) : super(key: key);
   final Color color;
   final Color color1;
@@ -24,7 +24,7 @@ class FirstPartBar extends StatelessWidget {
   final Color color2;
   final Color color3;
   final double fontSize2;
-
+final double barHeight;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,7 +32,7 @@ class FirstPartBar extends StatelessWidget {
         Expanded(
           child: Container(
             color: color,
-            height: firstBarHeight,
+            height: barHeight,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,

@@ -2,7 +2,6 @@ import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 import '../widgets/app_bar_titles.dart';
-import '../widgets/first_part_bar.dart';
 import 'courses_screen.dart';
 import 'home_page.dart';
 
@@ -25,6 +24,9 @@ class _BlogScreenState extends State<BlogScreen> {
           children: [
             Column(
               children: [
+                const SizedBox(
+                  height: 30,
+                ),
                 Text(
                   blogText,
                   style: const TextStyle(
@@ -39,6 +41,14 @@ class _BlogScreenState extends State<BlogScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
+    String imageName = 'images/deepLearningLogo.png';
+    String courseTitle = 'Courses';
+    String theBatchTitle = 'The Batch';
+    String eventsTitle = 'Events';
+    String blogTitle = 'Bolg';
+    String companyTitle = 'Company';
+    String font = 'Fredokat';
+    String getBtnText = 'Get Al News';
     return AppBar(
       backgroundColor: Colors.white,
       toolbarHeight: 110,
@@ -48,9 +58,7 @@ class _BlogScreenState extends State<BlogScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
-                child: Image.asset(
-                  'images/deepLearningLogo.png',
-                ),
+                child: Image.asset(imageName),
                 onTap: () {
                   Navigator.pushReplacement(
                       context,
@@ -62,8 +70,8 @@ class _BlogScreenState extends State<BlogScreen> {
                 width: 35,
               ),
               AppBarTitles(
-                title: 'Courses',
-                font: 'Fredokat',
+                title: courseTitle,
+                font: font,
                 onPressed: () {
                   Navigator.pushReplacement(
                       context,
@@ -81,16 +89,16 @@ class _BlogScreenState extends State<BlogScreen> {
                       MaterialPageRoute(
                           builder: (context) => const TheBatchScreen()));
                 },
-                title: 'The Batch',
-                font: 'Fredokat',
+                title: theBatchTitle,
+                font: font,
               ),
               const SizedBox(
                 width: 35,
               ),
               AppBarTitles(
                 onPressed: () {},
-                title: 'Blog',
-                font: 'Fredokat',
+                title:blogTitle,
+                font: font,
               ),
               const SizedBox(
                 width: 35,
@@ -102,8 +110,8 @@ class _BlogScreenState extends State<BlogScreen> {
                       MaterialPageRoute(
                           builder: (context) => const TheBatchScreen()));
                 },
-                title: 'Events',
-                font: 'Fredokat',
+                title: eventsTitle,
+                font: font,
               ),
               const SizedBox(
                 width: 35,
@@ -115,8 +123,8 @@ class _BlogScreenState extends State<BlogScreen> {
                       MaterialPageRoute(
                           builder: (context) => const TheBatchScreen()));
                 },
-                title: 'Company',
-                font: 'Fredokat',
+                title: companyTitle,
+                font: font,
               ),
               const SizedBox(
                 width: 35,
@@ -130,7 +138,7 @@ class _BlogScreenState extends State<BlogScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
                 width: 140,
-                child: const Center(child: Text('Get Al News')),
+                child:  Center(child: Text(getBtnText)),
               )
             ],
           ),

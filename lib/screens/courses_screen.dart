@@ -34,7 +34,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
           children: [
             Column(
               children: [
-                FirstPartBar(
+                FirstPartBar(barHeight: 510,
                   fontSize2: 40,
                   color2: Colors.black,
                   color3: Colors.black,
@@ -500,7 +500,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
-    String imageName = 'images/the_batch.png';
+    String imageName = 'images/deepLearningLogo.png';
     String courseTitle = 'Courses';
     String theBatchTitle = 'The Batch';
     String eventsTitle = 'Events';

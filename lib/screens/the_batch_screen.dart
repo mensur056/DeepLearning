@@ -28,7 +28,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
           children: [
             Column(
               children: [
-                FirstPartBar(
+                FirstPartBar(barHeight: 400,
                   fontSize2: 30,
                   color2: Colors.white,
                   color3: Colors.white,
