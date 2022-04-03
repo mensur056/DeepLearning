@@ -143,26 +143,31 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     ),
                     space,
                     FloatingActionButton(
-                        backgroundColor: Colors.white,
-                        elevation: 1,
-                        onPressed: () {
-                          setState(() {
-                            isSelected = !isSelected;
-                          });
-                        },
-                        child: isSelected
-                            ? SvgPicture.asset(
-                                'images/moon.svg',
-                                width: 25,
-                                height: 25,
-                              )
-                            : SvgPicture.asset(
-                                'images/sun.svg',
-                                width: 25,
-                                height: 25,
-                              ))
+                      backgroundColor: Colors.white,
+                      elevation: 1,
+                      onPressed: () {
+                        setState(() {
+                          isSelected = !isSelected;
+                        });
+                      },
+                      child: isSelected
+                          ? SvgPicture.asset(
+                              'images/moon.svg',
+                              width: 25,
+                              height: 25,
+                            )
+                          : SvgPicture.asset(
+                              'images/sun.svg',
+                              width: 25,
+                              height: 25,
+                            ),
+                    )
                   ],
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left:335.0,right: 335),
+                  child: const Divider(),
+                ),
               ],
             )
           ],
