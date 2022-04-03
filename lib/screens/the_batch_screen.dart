@@ -61,22 +61,46 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      name_1,
-                      style: texStyle,
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        name_1,
+                        style: texStyle,
+                      ),
                     ),
                     space,
-                    Text(name_2, style: texStyle),
+                    TextButton(
+                      child: Text(
+                        name_2,
+                        style: texStyle,
+                      ),
+                      onPressed: () {},
+                    ),
                     space,
-                    Text(name_3, style: texStyle),
+                    TextButton(
+                      child: Text(name_3, style: texStyle),
+                      onPressed: () {},
+                    ),
                     space,
-                    Text(name_4, style: texStyle),
+                    TextButton(
+                      child: Text(name_4, style: texStyle),
+                      onPressed: () {},
+                    ),
                     space,
-                    Text(name_5, style: texStyle),
+                    TextButton(
+                      child: Text(name_5, style: texStyle),
+                      onPressed: () {},
+                    ),
                     space,
-                    Text(name_6, style: texStyle),
+                    TextButton(
+                      child: Text(name_6, style: texStyle),
+                      onPressed: () {},
+                    ),
                     space,
-                    Text(name_7, style: texStyle),
+                    TextButton(
+                      child: Text(name_7, style: texStyle),
+                      onPressed: () {},
+                    ),
                     space,
                     IconButton(
                       onPressed: () {},
@@ -88,8 +112,27 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     space,
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text(
-                        subscribeCard,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 10.0, bottom: 10),
+                        child: Row(
+                          children: [
+                            Text(
+                              subscribeCard,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'Fredokat',
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.mail_outline,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
                       ),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.red, // background
