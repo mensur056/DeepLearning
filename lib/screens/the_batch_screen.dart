@@ -1,8 +1,7 @@
-import 'dart:html';
-
 import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hovering/hovering.dart';
 
 import '../widgets/app_bar_titles.dart';
@@ -85,7 +84,17 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         color: Colors.black,
                       ),
                     ),
-                    ElevatedButton(onPressed: () {}, child: Text(subscribeCard))
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        subscribeCard,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.red, // background
+                        // foreground
+                      ),
+                    ),
+                    SvgPicture.asset('images/moon.svg')
                   ],
                 )
               ],
