@@ -14,9 +14,7 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
-  String imageName = 'images/logoooo2.png';
-  String titleName = 'The Batch: Weekly AI news ';
-  String titleName1 = 'for engineers,executives.';
+  final String blogText = 'Blog';
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +25,10 @@ class _BlogScreenState extends State<BlogScreen> {
           children: [
             Column(
               children: [
-                FirstPartBar(fontSize2: 30,
-                  color2: Colors.white,
-                  color3: Colors.white,
-                  fontSize: 50,
-                  color: Colors.orange,
-                  color1: Colors.orange,
-                  image: imageName,
-                  title: titleName,
-                  title1: titleName1,
+                Text(
+                  blogText,
+                  style: const TextStyle(
+                      color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 )
               ],
             )

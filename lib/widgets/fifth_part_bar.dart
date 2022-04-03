@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:deep_learning/screens/home_page.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
@@ -53,7 +54,7 @@ class FifthPartBar extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
+                          builder: (context) => const BlogScreen()));
                 },
               ),
               const SizedBox(
