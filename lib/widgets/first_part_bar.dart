@@ -1,25 +1,37 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+
 class FirstPartBar extends StatelessWidget {
   const FirstPartBar({
-    Key? key, required this.color, required this.color1, required this.image, required this.title, required this.title1, required this.fontSize, required this.color2, required this.color3,
+    Key? key,
+    required this.color,
+    required this.color1,
+    required this.image,
+    required this.title,
+    required this.title1,
+    required this.fontSize,
+    required this.color2,
+    required this.color3,
+    required this.fontSize2,
   }) : super(key: key);
-final Color color;
-final Color color1;
-final String image;
-final String title;
-final String title1;
-final double fontSize;
-final Color color2;
-final Color color3;
+  final Color color;
+  final Color color1;
+  final String image;
+  final String title;
+  final String title1;
+  final double fontSize;
+  final Color color2;
+  final Color color3;
+  final double fontSize2;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
           child: Container(
-            color:color,
+            color: color,
             height: firstBarHeight,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,22 +45,21 @@ final Color color3;
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
+                  children: [
                     const SizedBox(
                       height: 150,
                     ),
                     Text(
                       title,
-                      style:  TextStyle(
-                          color:color2,
+                      style: TextStyle(
+                          color: color2,
                           fontWeight: FontWeight.bold,
                           fontSize: fontSize,
                           fontFamily: 'Poppins'),
                     ),
-                     Text(
-                     title1,
-                      style:  TextStyle(
-                          color: color3, fontSize: 45),
+                    Text(
+                      title1,
+                      style: TextStyle(color: color3, fontSize: fontSize2),
                     )
                   ],
                 ),

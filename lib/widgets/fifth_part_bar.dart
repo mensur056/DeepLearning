@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:deep_learning/screens/home_page.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class FifthPartBar extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                            builder: (context) => const CoursesScreen()));
                   }),
               const SizedBox(
                 width: 35,

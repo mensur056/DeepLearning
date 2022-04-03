@@ -1,4 +1,5 @@
 import 'package:deep_learning/screens/courses_screen.dart';
+import 'package:deep_learning/screens/the_batch_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DeepLearning',
-      home: CoursesScreen(),
+      home: TheBatchScreen(),
     );
   }
 }
