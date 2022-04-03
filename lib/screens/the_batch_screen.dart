@@ -36,6 +36,8 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
     width: 20,
   );
   bool isSelected = false;
+  double containerBarHeight = 400;
+  double containerBarWidth = 402;
 
   @override
   Widget build(BuildContext context) {
@@ -164,10 +166,34 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left:335.0,right: 335),
-                  child: const Divider(),
+                const Padding(
+                  padding: EdgeInsets.only(left: 335.0, right: 335),
+                  child: Divider(),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text('hello'),
+                      height: containerBarHeight,
+                      width: containerBarWidth,
+                      color: Colors.red,
+                    ),space,
+                    Container(
+                      child: Text('hello'),
+                      height: containerBarHeight,
+                      width: containerBarWidth,
+                      color: Colors.red,
+                    ),
+                    space,
+                    Container(
+                      child: Text('hello'),
+                      height: containerBarHeight,
+                      width: containerBarWidth,
+                      color: Colors.red,
+                    ),
+                  ],
+                )
               ],
             )
           ],
