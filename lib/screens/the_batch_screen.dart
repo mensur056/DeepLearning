@@ -173,7 +173,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                 const Padding(
                   padding: EdgeInsets.only(left: 335.0, right: 335),
                   child: Divider(),
-                ),
+                ),spaceHeight,
                 ContainerOfTheBatch(
                     containerBarHeight: containerBarHeight,
                     containerBarWidth: containerBarWidth,

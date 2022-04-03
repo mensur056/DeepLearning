@@ -18,24 +18,39 @@ class ContainerOfTheBatch extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
+          decoration: const BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
           child: const Text('hello'),
           height: containerBarHeight,
           width: containerBarWidth,
-          color: Colors.red,
         ),
         space,
         Container(
+          decoration: const BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
           child: const Text('hello'),
           height: containerBarHeight,
           width: containerBarWidth,
-          color: Colors.red,
         ),
         space,
         Container(
+          decoration: const BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
+          ),
           child: const Text('hello'),
           height: containerBarHeight,
           width: containerBarWidth,
-          color: Colors.red,
         ),
       ],
     );
