@@ -38,7 +38,8 @@ class _HomePageState extends State<HomePage> {
           children: [
             Column(
               children: [
-                FirstPartBar(barHeight: 510,
+                FirstPartBar(
+                    barHeight: 510,
                     fontSize2: 30,
                     color2: Colors.white,
                     color3: Colors.white,
@@ -185,7 +186,10 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('images/deepLearningLogo.png'),
+              Padding(
+                padding: const EdgeInsets.only(top: 7.0, bottom: 7),
+                child: Image.asset('images/datalandLogo.png'),
+              ),
               const SizedBox(
                 width: 35,
               ),

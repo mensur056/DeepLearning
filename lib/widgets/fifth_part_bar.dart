@@ -17,7 +17,7 @@ class FifthPartBar extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('images/deepLearningLogo.png'),
+          Image.asset('images/datalandLogo-removebg-preview.png'),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
