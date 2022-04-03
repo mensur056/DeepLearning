@@ -1,5 +1,4 @@
 
-
 const double secondBarHeight=370;
 const double thirdBarHeight=670;
 const double fourthBarHeight=800;

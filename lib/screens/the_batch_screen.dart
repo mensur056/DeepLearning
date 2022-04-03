@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,18 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
   String imageName = 'images/logoooo2.png';
   String titleName_1 = 'The Batch: Weekly AI news ';
   String titleName_2 = 'for engineers,executives.';
+  String name_1 = 'Weekly Newsletter';
+  String name_2 = 'Andrew’s Letters';
+  String name_3 = 'Machine Learning Research';
+  String name_4 = 'Business';
+  String name_5 = 'Science';
+  String name_6 = 'Society';
+  String name_7 = 'Culture';
+  var texStyle =
+      const TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'Fredokat',fontWeight: FontWeight.bold);
+  var space = const SizedBox(
+    width: 20,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +42,8 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
           children: [
             Column(
               children: [
-                FirstPartBar(barHeight: 400,
+                FirstPartBar(
+                  barHeight: 400,
                   fontSize2: 30,
                   color2: Colors.white,
                   color3: Colors.white,
@@ -38,6 +53,28 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                   image: imageName,
                   title: titleName_1,
                   title1: titleName_2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      name_1,
+                      style: texStyle,
+                    ),
+                    space,
+                    Text(name_2, style: texStyle),
+                    space,
+                    Text(name_3, style: texStyle),
+                    space,
+                    Text(name_4, style: texStyle),
+                    space,
+                    Text(name_5, style: texStyle),
+                    space,
+                    Text(name_6, style: texStyle),
+                    space,
+                    Text(name_7, style: texStyle),
+                    space,
+                  ],
                 )
               ],
             )
