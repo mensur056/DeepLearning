@@ -32,8 +32,11 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
       fontSize: 16,
       fontFamily: 'Fredokat',
       fontWeight: FontWeight.bold);
-  var space = const SizedBox(
+  var spaceWidth = const SizedBox(
     width: 20,
+  );
+  var spaceHeight = const SizedBox(
+   height: 20,
   );
   bool isSelected = false;
   double containerBarHeight = 400;
@@ -70,7 +73,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         style: texStyle,
                       ),
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(
                         name_2,
@@ -78,27 +81,27 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                       ),
                       onPressed: () {},
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(name_3, style: texStyle),
                       onPressed: () {},
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(name_4, style: texStyle),
                       onPressed: () {},
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(name_5, style: texStyle),
                       onPressed: () {},
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(name_6, style: texStyle),
                       onPressed: () {},
                     ),
-                    space,
+                    spaceWidth,
                     TextButton(
                       child: Text(name_7, style: texStyle),
                       onPressed: () {},
@@ -113,7 +116,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         color: Colors.black,
                       ),
                     ),
-                    space,
+                    spaceWidth,
                     ElevatedButton(
                       onPressed: () {},
                       child: Padding(
@@ -143,7 +146,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         // foreground
                       ),
                     ),
-                    space,
+                    spaceWidth,
                     FloatingActionButton(
                       backgroundColor: Colors.white,
                       elevation: 1,
@@ -170,30 +173,25 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                   padding: EdgeInsets.only(left: 335.0, right: 335),
                   child: Divider(),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      child: Text('hello'),
-                      height: containerBarHeight,
-                      width: containerBarWidth,
-                      color: Colors.red,
-                    ),space,
-                    Container(
-                      child: Text('hello'),
-                      height: containerBarHeight,
-                      width: containerBarWidth,
-                      color: Colors.red,
-                    ),
-                    space,
-                    Container(
-                      child: Text('hello'),
-                      height: containerBarHeight,
-                      width: containerBarWidth,
-                      color: Colors.red,
-                    ),
-                  ],
-                )
+                ContainerOfTheBatch(
+                    containerBarHeight: containerBarHeight,
+                    containerBarWidth: containerBarWidth,
+                    space: spaceWidth),
+                SizedBox(
+                  height: 10,
+                ),
+                ContainerOfTheBatch(
+                    containerBarHeight: containerBarHeight,
+                    containerBarWidth: containerBarWidth,
+                    space: spaceWidth),
+                ContainerOfTheBatch(
+                    containerBarHeight: containerBarHeight,
+                    containerBarWidth: containerBarWidth,
+                    space: spaceWidth),
+                ContainerOfTheBatch(
+                    containerBarHeight: containerBarHeight,
+                    containerBarWidth: containerBarWidth,
+                    space: spaceWidth)
               ],
             )
           ],
@@ -307,6 +305,48 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
               )
             ],
           ),
+        ),
+      ],
+    );
+  }
+}
+
+class ContainerOfTheBatch extends StatelessWidget {
+  const ContainerOfTheBatch({
+    Key? key,
+    required this.containerBarHeight,
+    required this.containerBarWidth,
+    required this.space,
+  }) : super(key: key);
+
+  final double containerBarHeight;
+  final double containerBarWidth;
+  final SizedBox space;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          child: Text('hello'),
+          height: containerBarHeight,
+          width: containerBarWidth,
+          color: Colors.red,
+        ),
+        space,
+        Container(
+          child: Text('hello'),
+          height: containerBarHeight,
+          width: containerBarWidth,
+          color: Colors.red,
+        ),
+        space,
+        Container(
+          child: Text('hello'),
+          height: containerBarHeight,
+          width: containerBarWidth,
+          color: Colors.red,
         ),
       ],
     );
