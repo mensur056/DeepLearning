@@ -33,7 +33,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
       fontFamily: 'Fredokat',
       fontWeight: FontWeight.bold);
   var space = const SizedBox(
-    width: 20,
+    width: 30,
   );
   bool isSelected = false;
 
@@ -99,7 +99,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     space,
                     FloatingActionButton(
                         backgroundColor: Colors.white,
-                        elevation: 0,
+                        elevation: 1,
                         onPressed: () {
                           setState(() {
                             isSelected = !isSelected;
