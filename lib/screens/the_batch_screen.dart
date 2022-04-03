@@ -33,7 +33,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
       fontFamily: 'Fredokat',
       fontWeight: FontWeight.bold);
   var space = const SizedBox(
-    width: 30,
+    width: 20,
   );
   bool isSelected = false;
 
@@ -101,7 +101,9 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                       child: Text(name_7, style: texStyle),
                       onPressed: () {},
                     ),
-                    space,
+                    const SizedBox(
+                      width: 80,
+                    ),
                     IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -113,21 +115,21 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     ElevatedButton(
                       onPressed: () {},
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 10.0, bottom: 10),
+                        padding: const EdgeInsets.only(top: 8.0, bottom: 8),
                         child: Row(
                           children: [
                             Text(
                               subscribeCard,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
                                   fontFamily: 'Fredokat',
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.mail_outline,
                               color: Colors.white,
                             )
@@ -151,10 +153,14 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         child: isSelected
                             ? SvgPicture.asset(
                                 'images/moon.svg',
-                                width: 30,
-                                height: 30,
+                                width: 25,
+                                height: 25,
                               )
-                            : SvgPicture.asset('images/sun.svg'))
+                            : SvgPicture.asset(
+                                'images/sun.svg',
+                                width: 25,
+                                height: 25,
+                              ))
                   ],
                 )
               ],
