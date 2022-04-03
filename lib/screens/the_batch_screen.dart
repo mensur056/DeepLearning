@@ -25,10 +25,14 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
   String name_3 = 'Machine Learning Research';
   String name_4 = 'Business';
   String name_5 = 'Science';
+  String subscribeCard = 'Subscribe';
   String name_6 = 'Society';
   String name_7 = 'Culture';
-  var texStyle =
-      const TextStyle(color: Colors.grey, fontSize: 16, fontFamily: 'Fredokat',fontWeight: FontWeight.bold);
+  var texStyle = const TextStyle(
+      color: Colors.grey,
+      fontSize: 16,
+      fontFamily: 'Fredokat',
+      fontWeight: FontWeight.bold);
   var space = const SizedBox(
     width: 20,
   );
@@ -74,6 +78,14 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     space,
                     Text(name_7, style: texStyle),
                     space,
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.black,
+                      ),
+                    ),
+                    ElevatedButton(onPressed: () {}, child: Text(subscribeCard))
                   ],
                 )
               ],
