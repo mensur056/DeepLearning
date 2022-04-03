@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hovering/hovering.dart';
 
+import '../widgets/Container_Of_TheBatch.dart';
 import '../widgets/app_bar_titles.dart';
 import '../widgets/first_part_bar.dart';
 import 'home_page.dart';
@@ -36,7 +37,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
     width: 20,
   );
   var spaceHeight = const SizedBox(
-   height: 20,
+    height: 20,
   );
   bool isSelected = false;
   double containerBarHeight = 400;
@@ -177,17 +178,17 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                     containerBarHeight: containerBarHeight,
                     containerBarWidth: containerBarWidth,
                     space: spaceWidth),
-                SizedBox(
-                  height: 10,
-                ),
+                spaceHeight,
                 ContainerOfTheBatch(
                     containerBarHeight: containerBarHeight,
                     containerBarWidth: containerBarWidth,
                     space: spaceWidth),
+                spaceHeight,
                 ContainerOfTheBatch(
                     containerBarHeight: containerBarHeight,
                     containerBarWidth: containerBarWidth,
                     space: spaceWidth),
+                spaceHeight,
                 ContainerOfTheBatch(
                     containerBarHeight: containerBarHeight,
                     containerBarWidth: containerBarWidth,
@@ -305,48 +306,6 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
               )
             ],
           ),
-        ),
-      ],
-    );
-  }
-}
-
-class ContainerOfTheBatch extends StatelessWidget {
-  const ContainerOfTheBatch({
-    Key? key,
-    required this.containerBarHeight,
-    required this.containerBarWidth,
-    required this.space,
-  }) : super(key: key);
-
-  final double containerBarHeight;
-  final double containerBarWidth;
-  final SizedBox space;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          child: Text('hello'),
-          height: containerBarHeight,
-          width: containerBarWidth,
-          color: Colors.red,
-        ),
-        space,
-        Container(
-          child: Text('hello'),
-          height: containerBarHeight,
-          width: containerBarWidth,
-          color: Colors.red,
-        ),
-        space,
-        Container(
-          child: Text('hello'),
-          height: containerBarHeight,
-          width: containerBarWidth,
-          color: Colors.red,
         ),
       ],
     );
