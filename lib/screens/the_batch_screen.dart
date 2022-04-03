@@ -35,6 +35,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
   var space = const SizedBox(
     width: 20,
   );
+  bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +85,7 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         color: Colors.black,
                       ),
                     ),
+                    space,
                     ElevatedButton(
                       onPressed: () {},
                       child: Text(
@@ -94,7 +96,22 @@ class _TheBatchScreenState extends State<TheBatchScreen> {
                         // foreground
                       ),
                     ),
-                    SvgPicture.asset('images/moon.svg')
+                    space,
+                    FloatingActionButton(
+                        backgroundColor: Colors.white,
+                        elevation: 0,
+                        onPressed: () {
+                          setState(() {
+                            isSelected = !isSelected;
+                          });
+                        },
+                        child: isSelected
+                            ? SvgPicture.asset(
+                                'images/moon.svg',
+                                width: 30,
+                                height: 30,
+                              )
+                            : SvgPicture.asset('images/sun.svg'))
                   ],
                 )
               ],
