@@ -1,10 +1,9 @@
-import 'dart:io';
-
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
-import 'package:image_picker/image_picker.dart';
+
 import 'package:video_player/video_player.dart';
+import 'dart:async';
 import '../widgets/app_bar_titles.dart';
 import 'courses_screen.dart';
 import 'home_page.dart';
@@ -17,8 +16,35 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
+  VideoPlayerController? _controller;
+  VideoPlayerController? _controller2;
+  Future<void>? _initializeVideoPlayerFuture;
+  Future<void>? _initializeVideoPlayerFuture2;
+
+  @override
+  void initState() {
+    _controller = VideoPlayerController.network(
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    );
+    _controller2 = VideoPlayerController.network(
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    );
+    _initializeVideoPlayerFuture = _controller!.initialize();
+    _initializeVideoPlayerFuture2 = _controller2!.initialize();
+    _controller!.setLooping(true);
+    _controller2!.setLooping(true);
+
+    super.initState();
+  }
 
 
+  @override
+  void dispose() {
+    _controller!.dispose();
+    _controller2!.dispose();
+
+    super.dispose();
+  }
 
   final String blogText = 'Blog';
 
@@ -39,10 +65,60 @@ class _BlogScreenState extends State<BlogScreen> {
                   style: const TextStyle(
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(100.0),
+                  child: FutureBuilder(
+                    future: _initializeVideoPlayerFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        return AspectRatio(
+                          aspectRatio: _controller!.value.aspectRatio,
+                          child: VideoPlayer(_controller!),
+                        );
+                      } else {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(100.0),
+                  child: FutureBuilder(
+                    future: _initializeVideoPlayerFuture2,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        return AspectRatio(
+                          aspectRatio: _controller2!.value.aspectRatio,
+                          child: VideoPlayer(_controller2!),
+                        );
+                      } else {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                    },
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
+      ),
+      floatingActionButton: Row(
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                if (_controller!.value.isPlaying) {
+                  _controller!.pause();
+                } else {
+                  _controller!.play();
+                }
+              });
+            },
+            child: Icon(
+              _controller!.value.isPlaying ? Icons.pause : Icons.play_arrow,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -51,9 +127,7 @@ class _BlogScreenState extends State<BlogScreen> {
     String imageName = 'images/datalandLogo-removebg-preview.png';
     String courseTitle = 'Courses';
     String theBatchTitle = 'The Batch';
-    String eventsTitle = 'Events';
     String blogTitle = 'Bolg';
-    String companyTitle = 'Company';
     String font = 'Fredokat';
     String getBtnText = 'Get Al News';
     return AppBar(
@@ -110,8 +184,6 @@ class _BlogScreenState extends State<BlogScreen> {
               const SizedBox(
                 width: 100,
               ),
-
-
               HoverContainer(
                 decoration: const BoxDecoration(
                     color: Colors.red,

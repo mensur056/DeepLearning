@@ -203,6 +203,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.4"
+  image_picker_web:
+    dependency: "direct main"
+    description:
+      name: image_picker_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   intl:
     dependency: transitive
     description:
@@ -475,7 +482,7 @@ packages:
     source: hosted
     version: "5.1.1"
   video_player_web:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: video_player_web
       url: "https://pub.dartlang.org"
