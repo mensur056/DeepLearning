@@ -59,29 +59,7 @@ class FifthPartBar extends StatelessWidget {
               const SizedBox(
                 width: 35,
               ),
-              AppBarTitles(
-                title: 'Events',
-                font: 'Fredokat',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: 'Company',
-                font: 'Fredokat',
-              ),
+
             ],
           )
         ],

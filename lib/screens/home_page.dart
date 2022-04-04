@@ -232,32 +232,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 width: 35,
               ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: 'Events',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: 'Company',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
+
               HoverContainer(
                 decoration: const BoxDecoration(
                     color: Colors.red,

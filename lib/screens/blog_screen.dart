@@ -17,19 +17,8 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
-  VideoPlayerController? _videoPlayerController;
-  File? _video;
-  final picker = ImagePicker();
 
-  _pickVideo() async {
-    final video = await picker.getVideo(source: ImageSource.gallery);
-    _video = File(video!.path);
-    _videoPlayerController = VideoPlayerController.file(_video!)
-      ..initialize().then((_) {
-        setState(() {});
-        _videoPlayerController!.play();
-      });
-  }
+
 
   final String blogText = 'Blog';
 
@@ -50,22 +39,6 @@ class _BlogScreenState extends State<BlogScreen> {
                   style: const TextStyle(
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 ),
-                if (_video != null)
-                  _videoPlayerController!.value.isInitialized
-                      ? AspectRatio(
-                          aspectRatio:
-                              _videoPlayerController!.value.aspectRatio,
-                          child: VideoPlayer(_videoPlayerController!),
-                        )
-                      : Container()
-                else
-                  const Text('Click on pick video to selected video'),
-                RaisedButton(
-                  onPressed: () {
-                    _pickVideo();
-                  },
-                  child: const Text('Pick video from gallery'),
-                ),
               ],
             )
           ],
@@ -75,7 +48,7 @@ class _BlogScreenState extends State<BlogScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
-    String imageName = 'images/deepLearningLogo.png';
+    String imageName = 'images/datalandLogo-removebg-preview.png';
     String courseTitle = 'Courses';
     String theBatchTitle = 'The Batch';
     String eventsTitle = 'Events';
@@ -135,34 +108,10 @@ class _BlogScreenState extends State<BlogScreen> {
                 font: font,
               ),
               const SizedBox(
-                width: 35,
+                width: 100,
               ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: eventsTitle,
-                font: font,
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: companyTitle,
-                font: font,
-              ),
-              const SizedBox(
-                width: 35,
-              ),
+
+
               HoverContainer(
                 decoration: const BoxDecoration(
                     color: Colors.red,
