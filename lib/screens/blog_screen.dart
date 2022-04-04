@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 import '../widgets/app_bar_titles.dart';
 import 'courses_screen.dart';
@@ -14,23 +17,18 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
-  VideoPlayerController? _controller;
-  Future<void>? _initializedVideoPlayerFuture;
+  VideoPlayerController? _videoPlayerController;
+  File? _video;
+  final picker = ImagePicker();
 
-  @override
-  void initState() {
-    _controller = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
-    _initializedVideoPlayerFuture = _controller!.initialize();
-    _controller!.setLooping(true);
-    _controller!.setVolume(1.0);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _controller!.dispose();
-    super.dispose();
+  _pickVideo() async {
+    final video = await picker.getVideo(source: ImageSource.gallery);
+    _video = File(video!.path);
+    _videoPlayerController = VideoPlayerController.file(_video!)
+      ..initialize().then((_) {
+        setState(() {});
+        _videoPlayerController!.play();
+      });
   }
 
   final String blogText = 'Blog';
@@ -52,38 +50,26 @@ class _BlogScreenState extends State<BlogScreen> {
                   style: const TextStyle(
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 ),
-                FutureBuilder(
-                  future: _initializedVideoPlayerFuture,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return AspectRatio(
-                        aspectRatio: _controller!.value.aspectRatio,
-                        child: VideoPlayer(_controller!),
-                      );
-                    } else {
-                      return const Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    }
+                if (_video != null)
+                  _videoPlayerController!.value.isInitialized
+                      ? AspectRatio(
+                          aspectRatio:
+                              _videoPlayerController!.value.aspectRatio,
+                          child: VideoPlayer(_videoPlayerController!),
+                        )
+                      : Container()
+                else
+                  const Text('Click on pick video to selected video'),
+                RaisedButton(
+                  onPressed: () {
+                    _pickVideo();
                   },
+                  child: const Text('Pick video from gallery'),
                 ),
               ],
             )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_controller!.value.isPlaying) {
-              _controller!.pause();
-            } else {
-              _controller!.play();
-            }
-          });
-        },
-        child:
-            Icon(_controller!.value.isPlaying ? Icons.pause : Icons.play_arrow),
       ),
     );
   }
