@@ -1,6 +1,7 @@
 import 'package:deep_learning/screens/the_batch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
+import 'package:video_player/video_player.dart';
 import '../widgets/app_bar_titles.dart';
 import 'courses_screen.dart';
 import 'home_page.dart';
@@ -13,6 +14,25 @@ class BlogScreen extends StatefulWidget {
 }
 
 class _BlogScreenState extends State<BlogScreen> {
+  VideoPlayerController? _controller;
+  Future<void>? _initializedVideoPlayerFuture;
+
+  @override
+  void initState() {
+    _controller = VideoPlayerController.network(
+        'https://www.youtube.com/watch?v=H5v3kku4y6Q&ab_channel=HarryStylesVEVO');
+    _initializedVideoPlayerFuture = _controller!.initialize();
+    _controller!.setLooping(true);
+    _controller!.setVolume(1.0);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller!.dispose();
+    super.dispose();
+  }
+
   final String blogText = 'Blog';
 
   @override
@@ -31,11 +51,37 @@ class _BlogScreenState extends State<BlogScreen> {
                   blogText,
                   style: const TextStyle(
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
-                )
+                ),
+                FutureBuilder(
+                  future: _initializedVideoPlayerFuture,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.done) {
+                      return AspectRatio(
+                        aspectRatio: _controller!.value.aspectRatio,
+                        child: VideoPlayer(_controller!),
+                      );
+                    } else {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  },
+                ),
               ],
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            if (_controller!.value.isPlaying) {
+              _controller!.pause();
+            }
+          });
+        },
+        child:
+            Icon(_controller!.value.isPlaying ? Icons.pause : Icons.play_arrow),
       ),
     );
   }
@@ -97,7 +143,7 @@ class _BlogScreenState extends State<BlogScreen> {
               ),
               AppBarTitles(
                 onPressed: () {},
-                title:blogTitle,
+                title: blogTitle,
                 font: font,
               ),
               const SizedBox(
@@ -138,7 +184,7 @@ class _BlogScreenState extends State<BlogScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
                 width: 140,
-                child:  Center(child: Text(getBtnText)),
+                child: Center(child: Text(getBtnText)),
               )
             ],
           ),

@@ -500,7 +500,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
-    String imageName = 'images/deepLearningLogo.png';
+    String imageName = 'images/datalandLogo.png';
     String courseTitle = 'Courses';
     String theBatchTitle = 'The Batch';
     String eventsTitle = 'Events';
