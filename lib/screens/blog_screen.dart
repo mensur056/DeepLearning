@@ -20,7 +20,7 @@ class _BlogScreenState extends State<BlogScreen> {
   @override
   void initState() {
     _controller = VideoPlayerController.network(
-        'https://www.youtube.com/watch?v=H5v3kku4y6Q&ab_channel=HarryStylesVEVO');
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
     _initializedVideoPlayerFuture = _controller!.initialize();
     _controller!.setLooping(true);
     _controller!.setVolume(1.0);
@@ -77,6 +77,8 @@ class _BlogScreenState extends State<BlogScreen> {
           setState(() {
             if (_controller!.value.isPlaying) {
               _controller!.pause();
+            } else {
+              _controller!.play();
             }
           });
         },
