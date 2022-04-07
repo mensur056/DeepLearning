@@ -37,7 +37,6 @@ class _BlogScreenState extends State<BlogScreen> {
     super.initState();
   }
 
-
   @override
   void dispose() {
     _controller!.dispose();
@@ -65,60 +64,92 @@ class _BlogScreenState extends State<BlogScreen> {
                   style: const TextStyle(
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(100.0),
-                  child: FutureBuilder(
-                    future: _initializeVideoPlayerFuture,
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.done) {
-                        return AspectRatio(
-                          aspectRatio: _controller!.value.aspectRatio,
-                          child: VideoPlayer(_controller!),
-                        );
-                      } else {
-                        return const Center(child: CircularProgressIndicator());
-                      }
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(100.0),
-                  child: FutureBuilder(
-                    future: _initializeVideoPlayerFuture2,
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.done) {
-                        return AspectRatio(
-                          aspectRatio: _controller2!.value.aspectRatio,
-                          child: VideoPlayer(_controller2!),
-                        );
-                      } else {
-                        return const Center(child: CircularProgressIndicator());
-                      }
-                    },
-                  ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height: 400,
+                          width: 600,
+                          child: FutureBuilder(
+                            future: _initializeVideoPlayerFuture,
+                            builder: (context, snapshot) {
+                              if (snapshot.connectionState ==
+                                  ConnectionState.done) {
+                                return AspectRatio(
+                                  aspectRatio: _controller!.value.aspectRatio,
+                                  child: VideoPlayer(_controller!),
+                                );
+                              } else {
+                                return const Center(
+                                    child: CircularProgressIndicator());
+                              }
+                            },
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            setState(
+                              () {
+                                if (_controller!.value.isPlaying) {
+                                  _controller!.pause();
+                                } else {
+                                  _controller!.play();
+                                }
+                              },
+                            );
+                          },
+                          icon: Icon(_controller!.value.isPlaying
+                              ? Icons.pause
+                              : Icons.play_arrow),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height: 400,
+                          width: 600,
+                          child: FutureBuilder(
+                            future: _initializeVideoPlayerFuture2,
+                            builder: (context, snapshot) {
+                              if (snapshot.connectionState ==
+                                  ConnectionState.done) {
+                                return AspectRatio(
+                                  aspectRatio: _controller2!.value.aspectRatio,
+                                  child: VideoPlayer(_controller2!),
+                                );
+                              } else {
+                                return const Center(
+                                    child: CircularProgressIndicator());
+                              }
+                            },
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            setState(
+                              () {
+                                if (_controller2!.value.isPlaying) {
+                                  _controller2!.pause();
+                                } else {
+                                  _controller2!.play();
+                                }
+                              },
+                            );
+                          },
+                          icon: Icon(_controller2!.value.isPlaying
+                              ? Icons.pause
+                              : Icons.play_arrow),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
           ],
         ),
-      ),
-      floatingActionButton: Row(
-        children: [
-          FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                if (_controller!.value.isPlaying) {
-                  _controller!.pause();
-                } else {
-                  _controller!.play();
-                }
-              });
-            },
-            child: Icon(
-              _controller!.value.isPlaying ? Icons.pause : Icons.play_arrow,
-            ),
-          ),
-        ],
       ),
     );
   }

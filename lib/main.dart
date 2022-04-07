@@ -1,3 +1,4 @@
+import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
 import 'package:deep_learning/screens/the_batch_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DataLand',
-      home: TheBatchScreen(),
+      home: BlogScreen(),
     );
   }
 }
