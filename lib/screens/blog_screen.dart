@@ -65,6 +65,7 @@ class _BlogScreenState extends State<BlogScreen> {
                       color: Colors.black, fontFamily: 'Poppins', fontSize: 30),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
                       children: [
@@ -104,6 +105,9 @@ class _BlogScreenState extends State<BlogScreen> {
                               : Icons.play_arrow),
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      width: 50,
                     ),
                     Column(
                       children: [
@@ -223,7 +227,7 @@ class _BlogScreenState extends State<BlogScreen> {
                     color: Colors.green,
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
-                width: 140,
+                width: 139,
                 child: Center(child: Text(getBtnText)),
               )
             ],
