@@ -1,3 +1,4 @@
+import 'package:deep_learning/MyTexts/string_texts_utility.dart';
 import 'package:deep_learning/constants.dart';
 import 'package:deep_learning/screens/blog_screen.dart';
 import 'package:deep_learning/screens/courses_screen.dart';
@@ -168,9 +169,7 @@ class _HomePageState extends State<HomePage> {
       toolbarHeight: 110,
       actions: [
         Image.asset('images/im_logo-removebg-preview.png'),
-        const SizedBox(
-          width: 35,
-        ),
+        buildSizedBox(),
         AppBarTitles(
           title: 'Courses',
           font: 'Fredokat',
@@ -178,9 +177,7 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CoursesScreen()));
           },
         ),
-        const SizedBox(
-          width: 35,
-        ),
+        buildSizedBox(),
         AppBarTitles(
           onPressed: () {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TheBatchScreen()));
@@ -188,9 +185,7 @@ class _HomePageState extends State<HomePage> {
           title: 'The Batch',
           font: 'Fredokat',
         ),
-        const SizedBox(
-          width: 35,
-        ),
+        buildSizedBox(),
         AppBarTitles(
           onPressed: () {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const BlogScreen()));
@@ -198,22 +193,34 @@ class _HomePageState extends State<HomePage> {
           title: 'Blog',
           font: 'Fredokat',
         ),
-        const SizedBox(
-          width: 35,
-        ),
-        HoverContainer(
-          decoration: const BoxDecoration(color: Colors.red, borderRadius: BorderRadius.all(Radius.circular(5))),
-          hoverDecoration: const BoxDecoration(color: Colors.green, borderRadius: BorderRadius.all(Radius.circular(5))),
-          height: 40,
-          width: 140,
-          child: Center(
-            child: TextButton(
-              child: Text('Get Al News'),
+        buildSizedBox(),
+        Padding(
+            padding: MyPadding().myVerticalPadding,
+            child: ElevatedButton(
               onPressed: () {},
-            ),
-          ),
+              child: const Text(StringTextUtility.getAlButton),
+            )),
+        buildSizedBox(),
+        Padding(
+          padding: MyPadding().myVerticalPadding,
+          child: ElevatedButton(onPressed: () {}, child: const Text(StringTextUtility.singIn)),
+        ),
+        buildSizedBox(),
+        Padding(
+          padding: MyPadding().myVerticalPadding,
+          child: ElevatedButton(onPressed: () {}, child: const Text(StringTextUtility.singUp)),
         ),
       ],
     );
   }
+
+  SizedBox buildSizedBox() {
+    return const SizedBox(
+      width: 35,
+    );
+  }
+}
+
+class MyPadding {
+  final EdgeInsets myVerticalPadding = const EdgeInsets.symmetric(vertical: 30);
 }
