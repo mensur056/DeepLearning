@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AppBarTitles extends StatelessWidget {
@@ -17,19 +16,19 @@ class AppBarTitles extends StatelessWidget {
     return TextButton(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
-            (Set<MaterialState> states) {
-          if (states.contains(MaterialState.hovered)) {
-            return Colors.red;
-          }
+          (Set<MaterialState> states) {
+            if (states.contains(MaterialState.hovered)) {
+              return Colors.red;
+            }
 
-          return Colors.black87;
-        }),
+            return Colors.black87;
+          },
+        ),
       ),
-      onPressed:onPressed,
+      onPressed: onPressed,
       child: Text(
         title,
-        style: TextStyle(
-            fontSize: 20, fontFamily: font, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 20, fontFamily: font, fontWeight: FontWeight.bold),
       ),
     );
   }

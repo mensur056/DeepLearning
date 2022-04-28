@@ -6,7 +6,6 @@ import 'package:deep_learning/widgets/mail_and_register_part.dart';
 import 'package:deep_learning/widgets/on_hover_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
-
 import '../widgets/app_bar_titles.dart';
 import '../widgets/fifth_part_bar.dart';
 import '../widgets/first_part_bar.dart';
@@ -53,8 +52,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Expanded(
                       flex: 2,
-                      child: Container(
-                          color: Colors.white, height: secondBarHeight),
+                      child: Container(color: Colors.white, height: secondBarHeight),
                     ),
                     Container(
                       color: Colors.white,
@@ -100,9 +98,7 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   children: [
                     Expanded(
-                      child: Container(
-                          color: const Color(0xFFf0f6f9),
-                          height: thirdBarHeight),
+                      child: Container(color: const Color(0xFFf0f6f9), height: thirdBarHeight),
                     ),
                     Container(
                       color: const Color(0xFFf0f6f9),
@@ -115,17 +111,13 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const ThirdPartBar(
-                                  title1: 'Al For Everyone',
-                                  title2: 'Deep Learning\nSpecialization'),
+                              const ThirdPartBar(title1: 'Al For Everyone', title2: 'Deep Learning\nSpecialization'),
                               const SizedBox(
                                 height: 30,
                               ),
                               const ThirdPartBar(
-                                title1:
-                                    'Practical Data Science\n(PDS) Specialization',
-                                title2:
-                                    'Machine Learning\nEngineering for\nProduction (MLOps)\nSpecialization',
+                                title1: 'Practical Data Science\n(PDS) Specialization',
+                                title2: 'Machine Learning\nEngineering for\nProduction (MLOps)\nSpecialization',
                               ),
                               const SizedBox(
                                 height: 50,
@@ -133,22 +125,15 @@ class _HomePageState extends State<HomePage> {
                               OnHoverButton(
                                 child: HoverContainer(
                                   hoverDecoration: const BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(8))),
+                                      color: Colors.green, borderRadius: BorderRadius.all(Radius.circular(8))),
                                   child: const Center(
                                     child: Text(
                                       'See All Programs',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20),
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
                                     ),
                                   ),
                                   decoration: const BoxDecoration(
-                                      color: Colors.lightGreen,
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(8))),
+                                      color: Colors.lightGreen, borderRadius: BorderRadius.all(Radius.circular(8))),
                                   height: 60,
                                   width: 300,
                                 ),
@@ -179,72 +164,53 @@ class _HomePageState extends State<HomePage> {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF7a6fe9),
       toolbarHeight: 110,
       actions: [
-        Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 7.0, bottom: 7),
-                child: Image.asset('images/datalandLogo.png'),
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                title: 'Courses',
-                font: 'Fredokat',
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const CoursesScreen()));
-                },
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TheBatchScreen()));
-                },
-                title: 'The Batch',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-              AppBarTitles(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const BlogScreen()));
-                },
-                title: 'Blog',
-                font: 'Fredokat',
-              ),
-              const SizedBox(
-                width: 35,
-              ),
-
-              HoverContainer(
-                decoration: const BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                hoverDecoration: const BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(5))),
-                height: 40,
-                width: 140,
-                child: const Center(child: Text('Get Al News')),
-              )
-            ],
+        Image.asset('images/im_logo-removebg-preview.png'),
+        const SizedBox(
+          width: 35,
+        ),
+        AppBarTitles(
+          title: 'Courses',
+          font: 'Fredokat',
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CoursesScreen()));
+          },
+        ),
+        const SizedBox(
+          width: 35,
+        ),
+        AppBarTitles(
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TheBatchScreen()));
+          },
+          title: 'The Batch',
+          font: 'Fredokat',
+        ),
+        const SizedBox(
+          width: 35,
+        ),
+        AppBarTitles(
+          onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const BlogScreen()));
+          },
+          title: 'Blog',
+          font: 'Fredokat',
+        ),
+        const SizedBox(
+          width: 35,
+        ),
+        HoverContainer(
+          decoration: const BoxDecoration(color: Colors.red, borderRadius: BorderRadius.all(Radius.circular(5))),
+          hoverDecoration: const BoxDecoration(color: Colors.green, borderRadius: BorderRadius.all(Radius.circular(5))),
+          height: 40,
+          width: 140,
+          child: Center(
+            child: TextButton(
+              child: Text('Get Al News'),
+              onPressed: () {},
+            ),
           ),
         ),
       ],

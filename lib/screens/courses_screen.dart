@@ -500,41 +500,25 @@ class _CoursesScreenState extends State<CoursesScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
-    String imageName = 'images/datalandLogo.png';
-    String courseTitle = 'Courses';
-    String theBatchTitle = 'The Batch';
-    String eventsTitle = 'Events';
-    String blogTitle = 'Bolg';
-    String companyTitle = 'Company';
-    String font = 'Fredokat';
-    String getBtnText = 'Get Al News';
 
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF7a6fe9),
       toolbarHeight: 110,
       actions: [
         Expanded(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GestureDetector(
-                child: Image.asset(
-                  imageName,
-                ),
-                onTap: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
-                },
-              ),
+              Image.asset('images/im_logo-removebg-preview.png'),
               const SizedBox(
                 width: 35,
               ),
               AppBarTitles(
-                title: courseTitle,
-                font: font,
-                onPressed: () {},
+                title: 'Courses',
+                font: 'Fredokat',
+                onPressed: () {
+
+                },
               ),
               const SizedBox(
                 width: 35,
@@ -546,8 +530,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       MaterialPageRoute(
                           builder: (context) => const TheBatchScreen()));
                 },
-                title: theBatchTitle,
-                font: font,
+                title: 'The Batch',
+                font: 'Fredokat',
               ),
               const SizedBox(
                 width: 35,
@@ -559,30 +543,23 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       MaterialPageRoute(
                           builder: (context) => const BlogScreen()));
                 },
-                title: blogTitle,
-                font: font,
+                title: 'Blog',
+                font: 'Fredokat',
               ),
               const SizedBox(
-                width: 100,
+                width: 35,
               ),
-
 
               HoverContainer(
                 decoration: const BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5),
-                  ),
-                ),
+                    color: Colors.red,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
                 hoverDecoration: const BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5),
-                  ),
-                ),
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
                 width: 140,
-                child: Center(child: Text(getBtnText)),
+                child: const Center(child: Text('Get Al News')),
               )
             ],
           ),

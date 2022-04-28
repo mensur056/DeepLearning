@@ -33,7 +33,6 @@ class _BlogScreenState extends State<BlogScreen> {
     _initializeVideoPlayerFuture2 = _controller2!.initialize();
     _controller!.setLooping(true);
     _controller2!.setLooping(true);
-
     super.initState();
   }
 
@@ -69,7 +68,7 @@ class _BlogScreenState extends State<BlogScreen> {
                   children: [
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           height: 400,
                           width: 600,
                           child: FutureBuilder(
@@ -106,12 +105,12 @@ class _BlogScreenState extends State<BlogScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 50,
                     ),
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           height: 400,
                           width: 600,
                           child: FutureBuilder(
@@ -159,35 +158,22 @@ class _BlogScreenState extends State<BlogScreen> {
   }
 
   AppBar buildAppBar(BuildContext context) {
-    String imageName = 'images/datalandLogo-removebg-preview.png';
-    String courseTitle = 'Courses';
-    String theBatchTitle = 'The Batch';
-    String blogTitle = 'Bolg';
-    String font = 'Fredokat';
-    String getBtnText = 'Get Al News';
+
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF7a6fe9),
       toolbarHeight: 110,
       actions: [
         Expanded(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GestureDetector(
-                child: Image.asset(imageName),
-                onTap: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
-                },
-              ),
+              Image.asset('images/im_logo-removebg-preview.png'),
               const SizedBox(
                 width: 35,
               ),
               AppBarTitles(
-                title: courseTitle,
-                font: font,
+                title: 'Courses',
+                font: 'Fredokat',
                 onPressed: () {
                   Navigator.pushReplacement(
                       context,
@@ -205,20 +191,23 @@ class _BlogScreenState extends State<BlogScreen> {
                       MaterialPageRoute(
                           builder: (context) => const TheBatchScreen()));
                 },
-                title: theBatchTitle,
-                font: font,
+                title: 'The Batch',
+                font: 'Fredokat',
               ),
               const SizedBox(
                 width: 35,
               ),
               AppBarTitles(
-                onPressed: () {},
-                title: blogTitle,
-                font: font,
+                onPressed: () {
+
+                },
+                title: 'Blog',
+                font: 'Fredokat',
               ),
               const SizedBox(
-                width: 100,
+                width: 35,
               ),
+
               HoverContainer(
                 decoration: const BoxDecoration(
                     color: Colors.red,
@@ -227,8 +216,8 @@ class _BlogScreenState extends State<BlogScreen> {
                     color: Colors.green,
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 height: 40,
-                width: 139,
-                child: Center(child: Text(getBtnText)),
+                width: 140,
+                child: const Center(child: Text('Get Al News')),
               )
             ],
           ),
